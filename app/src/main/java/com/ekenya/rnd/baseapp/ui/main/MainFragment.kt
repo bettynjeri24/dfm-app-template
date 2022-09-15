@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
-import com.ekenya.rnd.baseapp.TourismApp
+import com.ekenya.rnd.baseapp.TopMainApp
 import com.ekenya.rnd.baseapp.databinding.FragmentMainBinding
 import com.ekenya.rnd.baseapp.di.helpers.activities.ActivityHelperKt
 import com.ekenya.rnd.baseapp.di.helpers.activities.AddressableActivity
@@ -30,7 +30,7 @@ class MainFragment : BaseDaggerFragment() {
         fun newInstance() = MainFragment()
     }
 
-    private var mApp: TourismApp? = null
+    private var mApp: TopMainApp? = null
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
@@ -75,7 +75,7 @@ class MainFragment : BaseDaggerFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //
-        mApp = activity?.application as TourismApp
+        mApp = activity?.application as TopMainApp
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

@@ -2,15 +2,13 @@ package com.ekenya.rnd.support
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.ekenya.rnd.baseapp.TourismApp
+import com.ekenya.rnd.baseapp.TopMainApp
 import com.ekenya.rnd.common.abstractions.BaseActivity
 import com.ekenya.rnd.support.databinding.ActivityMainBinding
 import dagger.android.AndroidInjector
@@ -55,6 +53,6 @@ class MainActivity : BaseActivity() {
     override fun supportFragmentInjector(): AndroidInjector<Fragment>? {
         // Fragment Injector should use the Application class
         // If necessary, I will use AndroidInjector as well as App class (I have not done this time)
-        return (application as TourismApp).supportFragmentInjector()
+        return (application as TopMainApp).supportFragmentInjector()
     }
 }

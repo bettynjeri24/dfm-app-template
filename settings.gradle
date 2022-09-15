@@ -4,8 +4,8 @@ dependencyResolutionManagement {
         jcenter()
     }
 }
-rootProject.name = "E Tourism"
+rootProject.name = "DFM Tour App"
 include ':app'
 include ':common'
-include ':etourism'
+include ':home'
 include ':support'

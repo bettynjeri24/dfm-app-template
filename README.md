@@ -26,7 +26,7 @@ Fonts e.g. nunito_sans_dkimani
 
 
 
-For reference, see what has been done in Diaspora Remittance and Savings submodules.
+For reference.
 Happy coding 😎
 
 Some useful Git Submodule commands

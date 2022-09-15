@@ -1,4 +1,4 @@
-package com.ekenya.rnd.support.di
+package com.ekenya.rnd.home.di
 
 import android.app.Activity
 import androidx.annotation.Keep
@@ -9,7 +9,7 @@ import dagger.android.DispatchingAndroidInjector
 import javax.inject.Inject
 
 @Keep
-class SupportInjector: BaseModuleInjector {
+class HomeInjector: BaseModuleInjector {
     @Inject
     lateinit var activityInjector: DispatchingAndroidInjector<Activity>
 
@@ -17,7 +17,7 @@ class SupportInjector: BaseModuleInjector {
     lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
 
     override fun inject(app: TopMainApp) {
-        DaggerSupportComponent.builder()
+        DaggerTourismComponent.builder()
             .appComponent(app.appComponent)
             .build()
             .inject(this)
