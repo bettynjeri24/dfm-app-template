@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_cards"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ekenya.rnd.mycards.ui.fragments.home.MyCardsHomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_home_to_miniStatement"
+            app:destination="@id/miniStatementFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_homeFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_successfulFragment2"
+            app:destination="@id/successfulFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/miniStatementFragment"
+        android:name="com.ekenya.rnd.mycards.ui.fragments.mini_statement.FragmentMiniStatement"
+        android:label="fragment_ministatement"
+        tools:layout="@layout/fragment_mini_statement_cards" >
+        <action
+            android:id="@+id/action_miniStatementFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successfulFragment"
+        android:name="com.ekenya.rnd.common.successful.SuccessfulFragmentCommon"
+        android:label="fragment_sucessful"
+        tools:layout="@layout/fragment_sucessful_cards" >
+        <action
+            android:id="@+id/action_successful_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_successfulFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.ekenya.rnd.common.auth.CommonAuthFragment"
+        android:label="AuthFragment" >
+        <action
+            android:id="@+id/action_authFragment_to_successfulFragment"
+            app:destination="@id/successfulFragment" />
+    </fragment>
+
+
+
+</navigation>

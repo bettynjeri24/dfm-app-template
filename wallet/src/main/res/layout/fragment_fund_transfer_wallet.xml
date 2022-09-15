@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fundtransfer.FundsTransferFragmentWallet">
+
+    <include
+        android:id="@+id/clToolBar"
+        layout="@layout/custom_toolbar_wallet" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_16dp">
+            <!--Pesa Link-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvPesaLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_13dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:animateLayoutChanges="true"
+                app:cardBackgroundColor="@color/lightest_grey_wallet"
+                app:cardCornerRadius="@dimen/_16dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clPesaLink"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:padding="@dimen/_8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/iVPesaLink"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="@dimen/_16dp"
+                            android:layout_marginTop="@dimen/_8dp"
+                            android:layout_marginBottom="@dimen/_8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/pesalink_wallet"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/tVTitlePesaLink"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16dp"
+                            android:fontFamily="@font/nunitosans_bold_wallet"
+                            android:text="@string/pesa_link"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sp_text_size"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/iVPesaLink"
+                            app:layout_constraintTop_toTopOf="@+id/iVPesaLink" />
+
+                        <TextView
+                            android:id="@+id/tVPesaLinkDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8dp"
+                            android:layout_marginBottom="13dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:text="@string/make_pesa_link_transfers_and_register"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sp_text_size"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tVTitlePesaLink"
+                            app:layout_constraintTop_toBottomOf="@+id/tVTitlePesaLink" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iVPesaArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_marginBottom="@dimen/_4dp"
+                            android:paddingStart="@dimen/_16dp"
+                            android:paddingTop="@dimen/_16dp"
+                            android:paddingEnd="@dimen/_8dp"
+                            android:paddingBottom="@dimen/_16dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_arrow_open_side_wallet"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clPesaLinkComponent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clPesaLink">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clSendToPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tVSendToPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/send_to_phone"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVSendToPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVSendToPhone"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVSendToPhone" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clSendToAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clSendToPhone">
+
+                            <TextView
+                                android:id="@+id/tVSendToAccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/send_to_account"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVSendToAccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVSendToAccount"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVSendToAccount" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clSendToCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clSendToAccount">
+
+                            <TextView
+                                android:id="@+id/tVSendToCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/send_to_card"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVSendToCard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVSendToCard"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVSendToCard" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clPesalinkSettings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginBottom="@dimen/_16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clSendToCard">
+
+                            <TextView
+                                android:id="@+id/tVPesalinkSettings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/pesalink_settings"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVPesalinkSettings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVPesalinkSettings"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVPesalinkSettings" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/viewGroupPesaLink"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="clSendToPhone, clSendToAccount, clSendToCard, clPesalinkSettings" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--Mobile Money-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvMobileMoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                app:cardBackgroundColor="@color/lightest_grey_wallet"
+                app:cardCornerRadius="@dimen/_16dp"
+                app:cardElevation="@dimen/_0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvPesaLink">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMobileMoney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cVIvMobileMoney"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textSize="16sp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="@dimen/_0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.utils.widget.ImageFilterView
+                                android:id="@+id/iVMobileMoney"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/mobile_money_wallet" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tVTitleMobileMoney"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/nunitosans_bold_wallet"
+                            android:text="@string/mobile_money"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/cVIvMobileMoney"
+                            app:layout_constraintTop_toTopOf="@+id/cVIvMobileMoney" />
+
+                        <TextView
+                            android:id="@+id/tVMobileMoneyDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="13dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:text="@string/send_money_to_mobile_money_etc"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tVTitleMobileMoney"
+                            app:layout_constraintTop_toBottomOf="@+id/tVTitleMobileMoney" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iVMobileMoneyArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:paddingStart="@dimen/_16dp"
+                            android:paddingTop="@dimen/_16dp"
+                            android:paddingEnd="@dimen/_8dp"
+                            android:paddingBottom="@dimen/_16dp"
+                            android:src="@drawable/ic_arrow_open_side_wallet"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMobileMoneyComponent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clMobileMoney">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clSendToMpesa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tVSendToMpesa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/send_to_mpesa"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVSendToMpesa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVSendToMpesa"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVSendToMpesa" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clSendToAirtelMoney"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clSendToMpesa">
+
+                            <TextView
+                                android:id="@+id/tVSendToAirtelMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/send_to_airtel_money"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVSendToAirtelMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVSendToAirtelMoney"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVSendToAirtelMoney" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clSendToTKash"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clSendToAirtelMoney">
+
+                            <TextView
+                                android:id="@+id/tVSendToTKash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/send_to_t_kash"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVSendToTKash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVSendToTKash"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVSendToTKash" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/viewGroupMobileMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="clSendToMpesa, clSendToAirtelMoney, clSendToTKash" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--BankTransfers-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvBankTransfers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                app:cardBackgroundColor="@color/lightest_grey_wallet"
+                app:cardCornerRadius="@dimen/_16dp"
+                app:cardElevation="@dimen/_0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvMobileMoney">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clBankTransfers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cVIvBankTransfers"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textSize="16sp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="@dimen/_0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.utils.widget.ImageFilterView
+                                android:id="@+id/iVBankTransfers"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/bank_transfers_wallet" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tVTitleBankTransfers"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/nunitosans_bold_wallet"
+                            android:text="@string/bank_transfers"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/cVIvBankTransfers"
+                            app:layout_constraintTop_toTopOf="@+id/cVIvBankTransfers" />
+
+                        <TextView
+                            android:id="@+id/tVBankTransfersDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="13dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:text="@string/bank_transfers"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tVTitleBankTransfers"
+                            app:layout_constraintTop_toBottomOf="@+id/tVTitleBankTransfers" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iVBankTransfersArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_marginBottom="@dimen/_4dp"
+                            android:paddingStart="@dimen/_16dp"
+                            android:paddingTop="@dimen/_16dp"
+                            android:paddingEnd="@dimen/_8dp"
+                            android:paddingBottom="@dimen/_16dp"
+                            android:src="@drawable/ic_arrow_open_side_wallet"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clBankTransfersComponent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clBankTransfers">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clOwnTransfer"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tVOwnTransfer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/own_transfer"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVOwnTransfer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVOwnTransfer"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVOwnTransfer" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clInternalTransfer"
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clOwnTransfer">
+
+                            <TextView
+                                android:id="@+id/tVInternalTransfer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/internal_transfer"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVInternalTransfer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVInternalTransfer"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVInternalTransfer" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clRTGS"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clInternalTransfer">
+
+                            <TextView
+                                android:id="@+id/tVRTGS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/rtgs"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVRTGS"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVRTGS"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVRTGS" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clEFT"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clRTGS">
+
+                            <TextView
+                                android:id="@+id/tVEFT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/eft"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVEFT"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVEFT"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVEFT" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/viewGroupBankTransfers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="clOwnTransfer, clInternalTransfer, clRTGS, clEFT" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--RequestFunds-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvRequestFunds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                app:cardBackgroundColor="@color/lightest_grey_wallet"
+                app:cardCornerRadius="@dimen/_16dp"
+                app:cardElevation="@dimen/_0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvBankTransfers">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clRequestFunds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cVIvRequestFunds"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textSize="16sp"
+                            app:cardCornerRadius="50dp"
+                            app:cardElevation="@dimen/_0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.utils.widget.ImageFilterView
+                                android:id="@+id/iVRequestFunds"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/request_funds_wallet" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tVTitleRequestFunds"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:fontFamily="@font/nunitosans_bold_wallet"
+                            android:text="@string/request_funds"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/cVIvRequestFunds"
+                            app:layout_constraintTop_toTopOf="@+id/cVIvRequestFunds" />
+
+                        <TextView
+                            android:id="@+id/tVRequestFundsDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="13dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:text="@string/request_money"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/tVTitleRequestFunds"
+                            app:layout_constraintTop_toBottomOf="@+id/tVTitleRequestFunds" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iVRequestFundssArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_marginBottom="@dimen/_4dp"
+                            android:paddingStart="@dimen/_16dp"
+                            android:paddingTop="@dimen/_16dp"
+                            android:paddingEnd="@dimen/_8dp"
+                            android:paddingBottom="@dimen/_16dp"
+                            android:src="@drawable/ic_arrow_open_side_wallet"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clRequestFundsComponent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clRequestFunds">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clMpesaToAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tVMpesaToAccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/mpesa_to_account"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVMpesaToAccount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVMpesaToAccount"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVMpesaToAccount" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clNearFieldCommunication"
+                            android:layout_width="match_parent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clMpesaToAccount">
+
+                            <TextView
+                                android:id="@+id/tVNearFieldCommunication"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16dp"
+                                android:layout_marginTop="@dimen/_16dp"
+                                android:layout_marginBottom="@dimen/_16dp"
+                                android:fontFamily="@font/nunitosans_regular_wallet"
+                                android:text="@string/near_field_communication_nfc"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iVNearFieldCommunication"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_16dp"
+                                android:padding="@dimen/_8dp"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_arrow_open_side_wallet"
+                                app:layout_constraintBottom_toBottomOf="@+id/tVNearFieldCommunication"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/tVNearFieldCommunication" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/viewGroupRequestFunds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="clMpesaToAccount,clNearFieldCommunication" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

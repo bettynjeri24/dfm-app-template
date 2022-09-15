@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.airtime.HomeBuyAirTimeFragment">
+
+    <include
+        android:id="@+id/clToolBar"
+        layout="@layout/custom_toolbar_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <TextView
+                android:id="@+id/tv_who_would_you_like_to_buy_airtime_for"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/margin_16_dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_semibold_wallet"
+                android:text="@string/who_would_you_like_to_buy_airtime_for"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_16sp_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBeneficiaries"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/margin_16_dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:padding="@dimen/_4dp"
+                android:text="@string/beneficiary"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sp_text_size"
+                app:layout_constraintBottom_toTopOf="@id/clBeneficiary"
+                app:layout_constraintEnd_toStartOf="@id/tvSeeAll"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_who_would_you_like_to_buy_airtime_for" />
+
+            <TextView
+                android:id="@+id/tvSeeAll"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:padding="@dimen/_4dp"
+                android:text="@string/see_all_wallet"
+                android:textAlignment="textEnd"
+                android:textColor="@color/orange_wallet"
+                android:textSize="@dimen/_14sp_text_size"
+                app:layout_constraintBottom_toBottomOf="@id/tvBeneficiaries"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvBeneficiaries"
+                app:layout_constraintTop_toTopOf="@id/tvBeneficiaries" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBeneficiary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                app:layout_constraintBottom_toTopOf="@id/tvFrequents"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSeeAll">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAddBeneficiary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginEnd="@dimen/_2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:listitem="@layout/item_contact_list_layout_wallet" />
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvAddBeneficiary"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:backgroundTint="@color/grey_tint_wallet"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_12dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintEnd_toStartOf="@id/cvMyself"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cVAddIconBenefiaciary"
+                            android:layout_width="@dimen/_50dp"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:layout_marginTop="@dimen/_8dp"
+                            android:layout_marginEnd="@dimen/_8dp"
+                            android:layout_marginBottom="@dimen/_8dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textSize="16sp"
+
+                            app:cardCornerRadius="@dimen/_50dp"
+                            app:cardElevation="@dimen/_0dp"
+                            app:layout_constraintBottom_toTopOf="@id/tVTitleAddBeneficiary"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.utils.widget.ImageFilterView
+                                android:id="@+id/iVAccountDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/fab_add"
+                                android:tint="@color/light_blue_wallet" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tVTitleAddBeneficiary"
+                            android:layout_width="@dimen/_120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4dp"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_marginBottom="@dimen/_4dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:padding="@dimen/_4dp"
+                            android:singleLine="true"
+                            android:text="@string/add_beneficiary_wallet"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sp_text_size"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cVAddIconBenefiaciary" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvMyself"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:backgroundTint="@color/grey_tint_wallet"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_12dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintEnd_toStartOf="@id/cvOthers"
+                    app:layout_constraintStart_toEndOf="@id/cvAddBeneficiary"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cVIconMyself"
+                            android:layout_width="@dimen/_50dp"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:layout_marginTop="@dimen/_8dp"
+                            android:layout_marginEnd="@dimen/_8dp"
+                            android:layout_marginBottom="@dimen/_8dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textSize="16sp"
+                            app:cardCornerRadius="@dimen/_50dp"
+                            app:cardElevation="@dimen/_0dp"
+                            app:layout_constraintBottom_toTopOf="@id/tVTitleMyself"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/iVMyself"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_4dp"
+                                android:layout_marginTop="@dimen/_4dp"
+                                android:layout_marginEnd="@dimen/_4dp"
+                                android:layout_marginBottom="@dimen/_4dp"
+                                android:fontFamily="@font/nunito_sans_semibold"
+                                android:paddingTop="@dimen/_8dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/light_blue_wallet"
+                                android:textSize="@dimen/_16sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                tools:text="AM" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tVTitleMyself"
+                            android:layout_width="@dimen/_120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4dp"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_marginBottom="@dimen/_4dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:padding="@dimen/_4dp"
+                            android:singleLine="true"
+                            android:text="@string/myself_wallet"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sp_text_size"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cVIconMyself" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvOthers"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:backgroundTint="@color/grey_tint_wallet"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_12dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cvMyself"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cVIconOthers"
+                            android:layout_width="@dimen/_50dp"
+                            android:layout_height="@dimen/_50dp"
+                            android:layout_marginStart="@dimen/_8dp"
+                            android:layout_marginTop="@dimen/_8dp"
+                            android:layout_marginEnd="@dimen/_2dp"
+                            android:layout_marginBottom="@dimen/_8dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            android:textSize="16sp"
+                            app:cardCornerRadius="@dimen/_50dp"
+                            app:cardElevation="@dimen/_0dp"
+                            app:layout_constraintBottom_toTopOf="@id/tVTitleOthers"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/iVOthers"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/_4dp"
+                                android:layout_marginTop="@dimen/_4dp"
+                                android:layout_marginEnd="@dimen/_4dp"
+                                android:layout_marginBottom="@dimen/_4dp"
+                                android:fontFamily="@font/nunitosans_semibold_wallet"
+                                android:paddingTop="@dimen/_8dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/light_blue_wallet"
+                                android:textSize="@dimen/_16sp_text_size"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                tools:text="AM" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tVTitleOthers"
+                            android:layout_width="@dimen/_120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4dp"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_marginBottom="@dimen/_4dp"
+                            android:fontFamily="@font/nunitosans_regular_wallet"
+                            android:padding="@dimen/_4dp"
+                            android:singleLine="true"
+                            android:text="@string/alex_mwangi_wallet"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sp_text_size"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/cVIconOthers" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvFrequents"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/margin_16_dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:padding="@dimen/_4dp"
+                android:text="@string/frequents_wallet"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sp_text_size"
+                app:layout_constraintBottom_toTopOf="@id/rvFrequent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clBeneficiary" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFrequent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:background="@color/transparent"
+                android:clipToPadding="true"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toTopOf="@id/tvAllContacts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFrequents"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_contact_list_layout_wallet" />
+
+            <TextView
+                android:id="@+id/tvAllContacts"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:padding="@dimen/_4dp"
+                android:text="@string/all_contacts_wallet"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sp_text_size"
+                app:layout_constraintBottom_toTopOf="@id/rvAllContacts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvFrequent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAllContacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:background="@color/transparent"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAllContacts"
+                tools:listitem="@layout/item_contact_list_layout_wallet" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDailPad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:backgroundTint="@color/light_blue_wallet"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_baseline_dialpad_wallet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

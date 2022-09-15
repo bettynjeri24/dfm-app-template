@@ -1,0 +1,88 @@
+<resources>
+    <string name="title_personal_finance">Personal Finance</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="no_budget_set">No budget set</string>
+    <string name="create_new_budget">Create New Budget</string>
+    <string name="kes_00_00">KES 00.00</string>
+    <string name="this_months_expense">This months expense</string>
+    <string name="kes_25_000_00">Kes 25,000.00</string>
+    <string name="see_more">See More</string>
+    <string name="budgets">Budgets</string>
+    <string name="select_accounts_to_be_used_for_your_budget">Select accounts to be used for your budget</string>
+    <string name="remaining_balance">Remaining balance:</string>
+    <string name="in_limit">In limit</string>
+    <string name="your_recommended_spending_limits">Your recommended spending limits</string>
+    <string name="current_daily_average">Current Daily average</string>
+    <string name="daily_recommended">Daily recommended</string>
+    <string name="manage_budget">Manage budget</string>
+    <string name="monthly_budget">Monthly budget</string>
+
+
+    <string-array name="budget_cycle">
+        <item>Monthly</item>
+        <item>Quarterly </item>
+        <item>Semi Annually </item>
+        <item>Annually </item>
+    </string-array>
+
+    <string-array name="budget_categories">
+        <item>Entertainment</item>
+        <item>Bill Payments </item>
+        <item>Family </item>
+        <item>Transports</item>
+    </string-array>
+
+    <string-array name="budget_account">
+        <item>Account 1</item>
+        <item>Account 2</item>
+        <item>Account 3 </item>
+        <item>Account 4</item>
+    </string-array>
+    <string-array name="select_month">
+        <item>January </item>
+        <item> February </item>
+        <item>  March  </item>
+        <item> April </item>
+        <item>May </item>
+        <item> June </item>
+        <item> July </item>
+        <item>August </item>
+        <item> September </item>
+        <item>October </item>
+        <item> November </item>
+        <item>December </item>
+
+
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_personal_finance"><b>Welcome to personal finance</b>\n Where your finances are tracked and managed\n by you within your mobile banking app</string>
+    <string name="statistics">Statistics</string>
+    <string name="month">Month</string>
+    <string name="expenses">Expenses</string>
+    <string name="you_are_spending">You are spending more than you are earning</string>
+    <string name="income">Income</string>
+    <string name="expenditure_breakdown">Expenditure breakdown</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="quarterly">Quarterly</string>
+    <string name="amount">Amount</string>
+    <string name="cycle">Cycle</string>
+    <string name="eg_month">Eg:Month</string>
+    <string name="select_categories">Select Categories</string>
+    <string name="eg_all">Eg:All</string>
+    <string name="select_account">Select Account</string>
+    <string name="eg_account">Eg:Account</string>
+    <string name="continue_btn">Continue</string>
+    <string name="daily_average_spending">Daily average spending</string>
+    <string name="export_report">Export Report</string>
+    <string name="how_much_would_you_like_to_budget_for">How much would you like to budget for?</string>
+    <string name="edit_budget">Edit Budget</string>
+    <string name="funds_transfer_expense">Funds Transfer Expense</string>
+    <string name="total_spent">Total spent</string>
+    <string name="yearly_pf">Yearly</string>
+    <string name="spending_pf">Spending</string>
+
+</resources>

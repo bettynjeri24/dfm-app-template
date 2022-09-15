@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fundtransfer.mobile_money.selectcontacts.FragmentSelectContactWallet">
+
+    <include
+        android:id="@+id/clToolBar"
+        layout="@layout/custom_toolbar_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginBottom="@dimen/_4dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/btnContinue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <TextView
+                android:id="@+id/tv_who_would_you_like_to_buy_airtime_for"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/margin_16_dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_semibold_wallet"
+                android:text="@string/who_would_you_like_to_send_money_to"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_16sp_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSendingTo"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/margin_16_dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:padding="@dimen/_4dp"
+                android:text="@string/sending_to_wallet"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sp_text_size"
+                app:layout_constraintBottom_toTopOf="@id/clBeneficiary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_who_would_you_like_to_buy_airtime_for" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBeneficiary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                app:layout_constraintBottom_toTopOf="@id/tvFrequents"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSendingTo">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvAddBeneficiary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginEnd="@dimen/_2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_contact_list_layout_wallet" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvEnterNewPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:backgroundTint="@color/grey_tint_wallet"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/_12dp"
+                app:cardElevation="@dimen/_0dp"
+                app:layout_constraintBottom_toTopOf="@id/tvFrequents"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clBeneficiary">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cVInnerEnterNewPhoneNumber"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/nunitosans_regular_wallet"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:textSize="16sp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="@dimen/_0dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:id="@+id/iVEnterNewPhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_4dp"
+                            android:layout_marginTop="@dimen/_4dp"
+                            android:layout_marginEnd="@dimen/_4dp"
+                            android:layout_marginBottom="@dimen/_4dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_baseline_dialpad_wallet"
+
+                            app:layout_constraintBottom_toBottomOf="parent" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tVTitleEnterNewPhoneNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/nunitosans_regular_wallet"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16sp_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/cVInnerEnterNewPhoneNumber"
+                        app:layout_constraintEnd_toStartOf="@+id/iVEnterNewPhoneNumberArrow"
+                        app:layout_constraintStart_toEndOf="@+id/cVInnerEnterNewPhoneNumber"
+                        app:layout_constraintTop_toTopOf="@+id/cVInnerEnterNewPhoneNumber"
+                        android:text="Enter New phone number" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iVEnterNewPhoneNumberArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:layout_marginBottom="@dimen/_4dp"
+                        android:paddingStart="@dimen/_16dp"
+                        android:paddingTop="@dimen/_16dp"
+                        android:paddingEnd="@dimen/_16dp"
+                        android:paddingBottom="@dimen/_16dp"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_arrow_open_wallet"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/tvFrequents"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/margin_16_dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:padding="@dimen/_4dp"
+                android:text="@string/frequents_wallet"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sp_text_size"
+                app:layout_constraintBottom_toTopOf="@id/tvFrequents"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cvEnterNewPhoneNumber" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFrequent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:background="@color/transparent"
+                android:clipToPadding="true"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintBottom_toTopOf="@id/tvAllContacts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFrequents"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_contact_list_layout_wallet" />
+
+            <TextView
+                android:id="@+id/tvAllContacts"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16_dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:padding="@dimen/_4dp"
+                android:text="@string/all_contacts_wallet"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sp_text_size"
+                app:layout_constraintBottom_toTopOf="@id/rvAllContacts"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvFrequent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAllContacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_32dp"
+                android:background="@color/transparent"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAllContacts"
+                tools:listitem="@layout/item_contact_list_layout_wallet" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16_dp"
+        android:layout_marginTop="@dimen/margin_16_dp"
+        android:layout_marginEnd="@dimen/margin_16_dp"
+        android:layout_marginBottom="@dimen/_14dp"
+        android:background="@drawable/btn_rounded_corners_filled_wallet"
+        android:fontFamily="@font/nunitosans_extrabold_wallet"
+        android:text="@string/btn_continue_text"
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:backgroundTint="@color/light_blue_wallet"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:focusable="true"
+            android:src="@drawable/ic_baseline_dialpad_wallet"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@android:color/white" />-->
+
+    <!-- -->
+</androidx.constraintlayout.widget.ConstraintLayout>

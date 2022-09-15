@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mcVRoot"
+    android:layout_width="@dimen/_90dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:layout_marginStart="@dimen/_2dp"
+    android:layout_marginTop="@dimen/_2dp"
+    app:cardBackgroundColor="@color/white_wallet"
+    app:cardCornerRadius="@dimen/_8dp"
+    app:cardElevation="@dimen/_0dp"
+    app:layout_constraintEnd_toStartOf="@id/cvMyself"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvBeneficiaries">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_4dp"
+        android:paddingBottom="@dimen/_4dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cVAddIconBenefiaciary"
+            android:layout_width="@dimen/_45dp"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginStart="@dimen/_4dp"
+            android:layout_marginTop="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:layout_marginBottom="@dimen/_4dp"
+            android:gravity="center"
+            app:cardCornerRadius="@dimen/_50dp"
+            app:cardElevation="@dimen/_0dp"
+            app:layout_constraintBottom_toTopOf="@id/tVTitleAddBeneficiary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvAddBeneficiary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:background="@drawable/ic_grey_circle_bg_wallet"
+                android:fontFamily="@font/nunitosans_bold_wallet"
+                android:padding="@dimen/_8dp"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue_wallet"
+                android:textSize="@dimen/_12sp_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="AD" />
+
+            <ImageView
+                android:id="@+id/iVAddBeneficiary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:background="@drawable/ic_grey_circle_bg_wallet"
+                android:fontFamily="@font/nunitosans_bold_wallet"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_person_wallet"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/ivAddBeneficiaryCenter"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:background="@drawable/ic_blue_circle_cards_wallet"
+            android:padding="@dimen/_4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/close_vector_wallet"
+            android:tint="@color/white_wallet"
+            app:layout_constraintEnd_toEndOf="@id/cVAddIconBenefiaciary"
+            app:layout_constraintTop_toTopOf="@+id/cVAddIconBenefiaciary" />
+
+        <TextView
+            android:id="@+id/tVTitleAddBeneficiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2dp"
+            android:layout_marginTop="@dimen/_2dp"
+            android:layout_marginEnd="@dimen/_2dp"
+            android:layout_marginBottom="@dimen/_2dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:maxLines="2"
+            android:padding="@dimen/_2dp"
+            android:text="@string/john_doe_wallet"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sp_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cVAddIconBenefiaciary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+
+
+

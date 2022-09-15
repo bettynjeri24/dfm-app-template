@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mcVRoot"
+    android:layout_width="@dimen/_150dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:layout_marginStart="@dimen/_8dp"
+    android:layout_marginTop="@dimen/_4dp"
+    android:backgroundTint="@color/grey_tint_wallet"
+    app:cardCornerRadius="@dimen/_12dp"
+    app:cardElevation="@dimen/_0dp"
+    app:layout_constraintEnd_toStartOf="@id/cvMyself"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvBeneficiaries">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/_12dp"
+        android:paddingBottom="@dimen/_12dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cVAddIconBenefiaciary"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_8dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            app:cardCornerRadius="@dimen/_50dp"
+            app:cardElevation="@dimen/_0dp"
+            app:layout_constraintBottom_toTopOf="@id/tVTitleAddBeneficiary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/iVAddBeneficiary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:background="@color/white_wallet"
+                android:fontFamily="@font/nunitosans_bold_wallet"
+                android:paddingTop="@dimen/_8dp"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue_wallet"
+                android:textSize="@dimen/_16sp_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="@string/add_plus_icon_beneficiary_wallet" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tVTitleAddBeneficiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4dp"
+            android:layout_marginTop="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:layout_marginBottom="@dimen/_4dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:padding="@dimen/_4dp"
+            android:singleLine="true"
+            android:text="@string/add_plus_icon_beneficiary_wallet"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sp_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cVAddIconBenefiaciary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+
+
+

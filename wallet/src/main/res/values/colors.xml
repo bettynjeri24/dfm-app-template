@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--003D4C-->
+    <color name="colorPrimary">#083273</color>
+    <color name="colorPrimaryDark">#083273</color>
+    <color name="colorPrimaryLight">#083273</color>
+    <color name="colorAccent">#083273</color>
+
+    <color name="lightest_grey_wallet">#F7F7F7</color>
+
+    <color name="error">#d41a0c</color>
+
+    <color name="grey_tint_wallet">#F7F7F7</color>
+
+    <color name="grey_custom">#ECF1FF</color>
+    <color name="actionbar_opacity">#33000000</color>
+
+    <color name="dark_blue_wallet">#083273</color>
+
+    <color name="light_blue_wallet">#1AA7E1</color>
+    <color name="orange_wallet">#F69414</color>
+
+    <color name="dark_blue">#083273</color>
+    <color name="light_blue">#1AA7E1</color>
+    <color name="green">#40E11A</color>
+    <color name="red_text_color_wallet">#B51F1F</color>
+    <color name="gray_color_wallet">#6F7070</color>
+    <color name="gray1_wallet">#707070</color>
+
+
+    <color name="black_wallet">#FF000000</color>
+    <color name="white_wallet">#FFFFFFFF</color>
+    <color name="green_wallet">#40E11A</color>
+    <color name="text_input_layout_border_color_wallet">#666666</color>
+    <color name="text_grey_color_wallet">#6F7070</color>
+    <color name="light_gray_wallet2">#F7F7F7</color>
+    <color name="accent_blue">#1AA7E1</color>
+
+</resources>

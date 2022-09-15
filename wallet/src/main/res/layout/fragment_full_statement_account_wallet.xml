@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.myaccount.FullStatementAccountWalletFragment">
+
+    <include
+        android:id="@+id/clToolBar"
+        layout="@layout/custom_toolbar_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRecentTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:fontFamily="@font/nunitosans_semibold_wallet"
+        android:text="@string/here_are_all_your_full_statements_you_have_requested"
+        android:textAlignment="textStart"
+        android:textColor="@color/dark_blue_wallet"
+        android:textSize="@dimen/_16sp_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFullStatement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/tVFullStatementNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRecentTransactions"
+        tools:listitem="@layout/item_fullstatement_account_layout_wallet" />
+
+    <TextView
+        android:id="@+id/tVFullStatementNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:fontFamily="@font/nunitosans_semibold_wallet"
+        android:text="@string/note_you_will_incur_charges_for_statements_that_are_not_indicated_as_free"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/_16sp_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerateNewStatement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvFullStatement" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGenerateNewStatement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:background="@drawable/btn_rounded_corners_filled_wallet"
+        android:fontFamily="@font/nunitosans_extrabold_wallet"
+        android:text="@string/generate_new_statement_wallet"
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/btnSearchForOlderStatements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tVFullStatementNote" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSearchForOlderStatements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:background="@color/white_wallet"
+        android:fontFamily="@font/nunitosans_extrabold_wallet"
+        android:text="@string/search_for_older_statements"
+        android:textColor="@color/light_blue"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

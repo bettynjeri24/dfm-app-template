@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/billPaymentWalletFragment">
+
+
+    <fragment
+        android:id="@+id/billPaymentWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.bills.tabs.BillPaymentWalletFragment"
+        android:label="frament_bill_paymnrt"
+        tools:layout="@layout/fragment_bill_payment_wallet" >
+        <action
+            android:id="@+id/action_billPaymentWalletFragment_to_zukuInternetFragmentWallet"
+            app:destination="@id/zukuInternetFragmentWallet" />
+        <action
+            android:id="@+id/action_billPaymentWalletFragment_to_kplcPrepaidFragmentWallet"
+            app:destination="@id/kplcPrepaidFragmentWallet" />
+        <action
+            android:id="@+id/action_billPaymentWalletFragment_to_allBillPaymentWalletFragment"
+            app:destination="@id/allBillPaymentWalletFragment" />
+        <action
+            android:id="@+id/action_billPaymentWalletFragment_to_upcomingBillsPaymentWalletFragment"
+            app:destination="@id/upcomingBillsPaymentWalletFragment" />
+        <action
+            android:id="@+id/action_billPaymentWalletFragment_to_generalBillPaymentFragmentWallet"
+            app:destination="@id/generalBillPaymentFragmentWallet" />
+    </fragment>
+    <fragment
+        android:id="@+id/zukuInternetFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.bills.ZukuInternetFragmentWallet"
+        android:label="fragment_zuku_internet_wallet"
+        tools:layout="@layout/fragment_zuku_internet_wallet" />
+    <fragment
+        android:id="@+id/kplcPrepaidFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.bills.KplcPrepaidFragmentWallet"
+        android:label="fragment_kplc_prepaid_wallet"
+        tools:layout="@layout/fragment_kplc_prepaid_wallet" />
+    <fragment
+        android:id="@+id/allBillPaymentWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.bills.tabs.Tab1AllBillPaymentWalletFragment"
+        android:label="AllBillPaymentWalletFragment" />
+    <fragment
+        android:id="@+id/upcomingBillsPaymentWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.bills.tabs.Tab2UpcomingBillsPaymentWalletFragment"
+        android:label="UpcomingBillsPaymentWalletFragment" />
+    <!--    /////////////////////////////////////////////////////-->
+    <fragment
+        android:id="@+id/successfulFragmentWallet"
+        android:name="com.ekenya.rnd.common.successful.SuccessfulFragmentCommon"
+        android:label="fragment_sucessful_wallet"
+        tools:layout="@layout/fragment_sucessful_wallet" />
+    <fragment
+        android:id="@+id/commonAuthFragment"
+        android:name="com.ekenya.rnd.common.auth.CommonAuthFragment"
+        android:label="CommonAuthFragment" />
+    <fragment
+        android:id="@+id/generalBillPaymentFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.bills.GeneralBillPaymentFragmentWallet"
+        android:label="fragment_general_bill_payment_wallet"
+        tools:layout="@layout/fragment_general_bill_payment_wallet" />
+    <!--    /////////////////////////////////////////////////////-->
+</navigation>

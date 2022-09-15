@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="@dimen/_24dp"
+    tools:context=".ui.fundtransfer.requestfunds.mpesatoaccount.MpesaToAccountFragmentWallet">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--        Top bar-->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="52dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_rounded_bottomsheet_top_wallet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--        Request amount-->
+        <TextView
+            android:id="@+id/tv_nfc_funds_request_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:fontFamily="@font/nunitosans_semibold_wallet"
+            android:text="@string/nfc_funds_request_wallet"
+            android:textColor="@color/dark_blue_wallet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <!--        Amount-->
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/ivNfc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:padding="@dimen/_16dp"
+            android:src="@drawable/ic_scan_nfc_wallet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nfc_funds_request_wallet" />
+
+        <TextView
+            android:id="@+id/tv_scan_nfc_card_wallet"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_semibold_wallet"
+            android:padding="@dimen/_4dp"
+            android:text="@string/scan_nfc_card_wallet"
+            android:textColor="@color/dark_blue_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/ivNfc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivNfc"
+            app:layout_constraintTop_toTopOf="@id/ivNfc" />
+
+        <!--        Phone number-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiLayoutCardNumber"
+            style="@style/TextInputLayoutStyleWallet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/card_number"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivNfc">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/eg_254712345678_wallet"
+                android:inputType="number"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        Select Account-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputSelectAccount"
+            style="@style/TextInputLayoutStyleWallet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/amount_wallet"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tiLayoutCardNumber">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/enter_amount_wallet"
+                android:inputType="number"
+                android:padding="@dimen/_16dp"
+                android:singleLine="true"
+                android:textSize="@dimen/_16sp_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--        Continue button-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_32dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:background="@drawable/btn_rounded_corners_filled_wallet"
+            android:backgroundTint="@color/light_blue_wallet"
+            android:fontFamily="@font/nunitosans_extrabold_wallet"
+            android:text="@string/continue_wallet"
+            android:textColor="@color/white_wallet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputSelectAccount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

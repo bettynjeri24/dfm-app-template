@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deposit_wallet_navigation"
+    app:startDestination="@id/startDepositWalletFragment">
+
+    <fragment
+        android:id="@+id/startDepositWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.deposit.StartDepositWalletFragment"
+        android:label="fragment_start_deposit_wallet"
+        tools:layout="@layout/fragment_start_deposit_wallet" />
+
+    <fragment
+        android:id="@+id/startChequeDepositWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.deposit.cheque.StartChequeDepositWalletFragment"
+        android:label="StartChequeDepositWalletFragment"
+        tools:layout="@layout/fragment_cheque_deposit_wallet" />
+
+    <dialog
+        android:id="@+id/depositMpesaToAccountFragment"
+        android:name="com.ekenya.rnd.wallet.ui.deposit.DepositMpesaToAccountFragment"
+        android:label="fragment_deposit_mpesa_to_account_wallet"
+        tools:layout="@layout/fragment_deposit_mpesa_to_account_wallet" />
+    <!--    /////////////////////////////////////////////////////-->
+    <fragment
+        android:id="@+id/successfulFragmentWallet"
+        android:name="com.ekenya.rnd.common.successful.SuccessfulFragmentCommon"
+        android:label="fragment_sucessful_wallet"
+        tools:layout="@layout/fragment_sucessful_wallet" />
+    <fragment
+        android:id="@+id/commonAuthFragment"
+        android:name="com.ekenya.rnd.common.auth.CommonAuthFragment"
+        android:label="CommonAuthFragment" />
+    <!--    /////////////////////////////////////////////////////-->
+</navigation>

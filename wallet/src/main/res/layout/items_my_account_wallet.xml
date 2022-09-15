@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvAllMyAccounts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_16dp"
+    android:backgroundTint="@android:color/transparent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:cardCornerRadius="@dimen/_16dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tvAllYourAccounts">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMyAccountBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:background="@drawable/my_account_1_wallet">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvAccountType"
+            app:cardCornerRadius="@dimen/_4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_marginEnd="@dimen/_20dp"
+            app:cardElevation="@dimen/_0dp"
+            tools:backgroundTint="@color/orange_wallet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvAccountType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_arrow_open_wallet"
+                android:drawablePadding="@dimen/_4dp"
+                android:drawableTint="@color/white"
+                android:maxLines="1"
+                android:padding="@dimen/_4dp"
+                android:singleLine="true"
+                android:text="@string/premier_current_account_4001234567890"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sp_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/tvAvailableBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_80dp"
+            android:maxLines="1"
+            android:padding="@dimen/_4dp"
+            android:singleLine="true"
+            android:text="@string/available_balance"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvAccountType" />
+        <TextView
+            android:id="@+id/tvCurrencyCode"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:fontFamily="@font/nunitosans_bold_wallet"
+            android:maxLines="1"
+            android:padding="@dimen/_4dp"
+            android:singleLine="true"
+            android:text="@string/currency_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sp_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvAvailableBalanceAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvAvailableBalanceAmount" />
+
+        <TextView
+            android:id="@+id/tvAvailableBalanceAmount"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_25dp"
+            android:fontFamily="@font/nunitosans_bold_wallet"
+            android:maxLines="1"
+            android:padding="@dimen/_4dp"
+            android:singleLine="true"
+            android:text="@string/kes_22_000_00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sp_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivValueVisibility"
+            app:layout_constraintStart_toEndOf="@id/tvCurrencyCode"
+            app:layout_constraintTop_toBottomOf="@id/tvAvailableBalance" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/ivValueVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:padding="@dimen/_8dp"
+            android:tint="@color/white_wallet"
+            android:src="@drawable/ic_outline_visibility_on_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/tvAvailableBalanceAmount"
+            app:layout_constraintEnd_toStartOf="@+id/iVMyAccount"
+            app:layout_constraintTop_toTopOf="@id/tvAvailableBalanceAmount"  />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iVMyAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_4dp"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingTop="@dimen/_16dp"
+            android:paddingEnd="@dimen/_8dp"
+            android:paddingBottom="@dimen/_16dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow_forward_wallet"
+            app:layout_constraintBottom_toBottomOf="@id/tvAvailableBalanceAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvAvailableBalanceAmount" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

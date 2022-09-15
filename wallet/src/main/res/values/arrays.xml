@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--        <string-array name="banks">-->
+    <!--            <item>Select Bank</item>-->
+    <!--            <item>Equity Bank</item>-->
+    <!--            <item>NCBA Bank</item>-->
+    <!--            <item>Cooperative Bank.</item>-->
+    <!--            <item>Standared Chartered Bank.</item>-->
+    <!--            <item>National Bank.</item>-->
+    <!--            <item>ABSA Bank.</item>-->
+    <!--        </string-array>-->
+
+    <!--        <string-array name="regions">-->
+    <!--            <item>Select Branch</item>-->
+    <!--            <item>Nairobi</item>-->
+    <!--            <item>Kisumu</item>-->
+    <!--            <item>Mombasa</item>-->
+    <!--            <item>Machakos</item>-->
+    <!--            <item>Kisii</item>-->
+    <!--            <item>Nakuru</item>-->
+    <!--            <item>Garissa</item>-->
+    <!--            <item>Kitui</item>-->
+    <!--            <item>Kakamega</item>-->
+    <!--        </string-array>-->
+
+    <!-- ethipoia stuff-->
+    <!--    <string-array name="banks">-->
+    <!--        <item>Select Bank</item>-->
+    <!--        <item>National Bank of Ethiopia</item>-->
+    <!--        <item>ECLECTICS International Bank</item>-->
+    <!--        <item>Bank of Abyssinia</item>-->
+    <!--        <item>Berhan International Bank</item>-->
+    <!--        <item>Buna International Bank</item>-->
+    <!--        <item>Commercial Bank of Ethiopia</item>-->
+    <!--        <item>Construction and Business Bank</item>-->
+    <!--        <item>Cooperative Bank of Oromia</item>-->
+    <!--    </string-array>-->
+
+    <!--    <string-array name="regions">-->
+    <!--        <item>Select Branch</item>-->
+    <!--        <item>Addis Ababa</item>-->
+    <!--        <item>Afar Region</item>-->
+    <!--        <item>Amhara Region</item>-->
+    <!--        <item>Benishangul-Gumuz Region</item>-->
+    <!--        <item>Dire Dawa</item>-->
+    <!--        <item>Gambela Region</item>-->
+    <!--        <item>Harari Region</item>-->
+    <!--        <item>Oromia Region</item>-->
+    <!--        <item>Sidama Region</item>-->
+    <!--    </string-array>-->
+    <!-- ethiopia stuff-->
+
+    <!-- MALAWI stuff -->
+    <!--    <string-array name="regions">-->
+    <!--        <item>Select Branch</item>-->
+    <!--        <item>Blantyre</item>-->
+    <!--        <item>Lilongwe</item>-->
+    <!--        <item>Mzuzu</item>-->
+    <!--        <item>Zomba</item>-->
+    <!--        <item>Mangochi</item>-->
+    <!--        <item>Dzaleka</item>-->
+    <!--        <item>Kasungu</item>-->
+    <!--        <item>Madisi</item>-->
+    <!--    </string-array>-->
+
+    <!--    &lt;!&ndash; malawi banks &ndash;&gt;-->
+    <!--    <string-array name="banks">-->
+    <!--        <item>Select Bank</item>-->
+    <!--        <item>National Bank of Malawi</item>-->
+    <!--        <item>Standard Bank Malawi</item>-->
+    <!--        <item>NBS Bank</item>-->
+    <!--        <item>First Capital Bank Malawi Limited</item>-->
+    <!--        <item>Nedbank</item>-->
+    <!--        <item>Ecobank</item>-->
+    <!--        <item>FDH Bank</item>-->
+    <!--        <item>CDH Investment Bank</item>-->
+    <!--        <item>New Finance Bank</item>-->
+    <!--    </string-array>-->
+
+    <!-- UGANDA STUFF -->
+
+    <string-array name="regions">
+        <item>Select Branch</item>
+        <item>Kampala</item>
+        <item>Nansana</item>
+        <item>Kira</item>
+        <item>Ssabagabo</item>
+        <item>Mbarara</item>
+        <item>Mukono</item>
+        <item>Njeru</item>
+        <item>Gulu</item>
+        <item>Lugazi</item>
+        <item>Mbale</item>
+        <item>Jinja</item>
+        <item>Entebbe</item>
+    </string-array>
+
+
+    <!-- BANKS -->
+
+    <string-array name="banks_wallet">
+        <item>Select Bank</item>
+        <item>Stanbic Bank of Uganda</item>
+        <item>Standard Chartered Bank of Uganda</item>
+        <item>DFCU Bank</item>
+        <item>Absa Bank Uganda Limited</item>
+        <item>Centenary Bank of Uganda</item>
+        <item>Barclay’s Bank of Uganda</item>
+    </string-array>
+
+    <string-array name="account_type_wallet">
+        <item>Current Account- A/C #1234******6789</item>
+        <item>Personal Account- A/C #1234******6789</item>
+        <item>Joint Account- A/C #1234******6789</item>
+    </string-array>
+
+    <string-array name="accountTypeWallet">
+        <item>Current Account- A/C #1234******6789</item>
+        <item>Personal Account- A/C #1234******6789</item>
+        <item>Joint Account- A/C #1234******6789</item>
+    </string-array>
+
+    <string-array name="banksWallet">
+        <item>Bank A</item>
+        <item>Bank B</item>
+        <item>Bank C</item>
+        <item>Bank D</item>
+    </string-array>
+
+    <string-array name="branchesWallet">
+        <item>Branch A</item>
+        <item>Branch B</item>
+        <item>Branch C</item>
+    </string-array>
+
+    <string-array name="mno_mobile_money_providers_Wallet">
+        <item>Mpesa</item>
+        <item>Airtel money</item>
+        <item>T kash</item>
+    </string-array>
+
+
+    <string-array name="my_account">
+        <item>Current Account- A/C #1234******6789</item>
+        <item>Personal Account- A/C #1234******6789</item>
+        <item>Joint Account- A/C #1234******6789</item>
+    </string-array>
+
+
+    <string-array name="check_book_size">
+        <item>32 Page</item>
+        <item>48 Page</item>
+        <item>64 Page</item>
+
+    </string-array>
+
+    <string-array name="check_type_size">
+        <item>Cheque 1</item>
+        <item>Cheque 2</item>
+
+    </string-array>
+    <string-array name="frequency_types">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>3 Months</item>
+
+    </string-array>
+
+
+</resources>

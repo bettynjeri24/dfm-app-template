@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.budgets.expenses.ExpensesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8dp"
+        android:background="@color/pf_blue_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/pf_blue_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:titleTextColor="@color/pf_white"
+            tools:title="@string/expenses" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:id="@+id/scrollView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cLBudgetExists"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="visible">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_you_are_spending"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:padding="@dimen/_4dp"
+                android:text="@string/you_are_spending"
+                android:textAlignment="textStart"
+                android:textColor="@color/pf_dark_gray_text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_expense_amount_exists"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_32dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/nunitosans_bold_pf"
+                android:padding="@dimen/_8dp"
+                android:text="Kes -50,000"
+                android:textColor="@color/pf_red_text_color"
+                android:textSize="@dimen/_22_sp_text_size"
+                app:layout_constraintEnd_toStartOf="@id/tIlSelectMonth"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_you_are_spending" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tIlSelectMonth"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_32dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:hint="@string/month"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tv_expense_amount_exists"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_expense_amount_exists"
+                app:layout_constraintTop_toTopOf="@id/tv_expense_amount_exists">
+
+                <AutoCompleteTextView
+                    android:id="@+id/aCtSelectMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitosans_regular_pf"
+                    android:hint="Month"
+                    android:inputType="none"
+                    android:minHeight="@dimen/_48dp"
+                    android:textSize="@dimen/_14_sp_text_size" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_income_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:padding="@dimen/_4dp"
+                android:text="@string/income"
+                android:textColor="@color/pf_dark_gray_text_color"
+                app:layout_constraintEnd_toStartOf="@id/tv_income_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_expense_amount_exists" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_income_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_bold_pf"
+                android:padding="@dimen/_4dp"
+                android:text="@string/kes_25_000_00"
+                android:textColor="@color/pf_blue_color"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_income_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_income_desc"
+                app:layout_constraintTop_toTopOf="@+id/tv_income_desc" />
+
+
+            <ProgressBar
+                android:id="@+id/pBIncome"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:max="100"
+                android:progress="35"
+                android:progressTint="@color/pf_green"
+                android:secondaryProgressTint="@color/pf_light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_income_desc"
+                tools:layout_editor_absoluteY="430dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvExpense_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:padding="@dimen/_4dp"
+                android:text="@string/expenses"
+                android:textColor="@color/pf_dark_gray_text_color"
+                app:layout_constraintEnd_toStartOf="@id/tv_Expense_amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pBIncome" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_Expense_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_bold_pf"
+                android:padding="@dimen/_4dp"
+                android:text="@string/kes_25_000_00"
+                android:textColor="@color/pf_blue_color"
+                app:layout_constraintBottom_toBottomOf="@+id/tvExpense_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvExpense_desc"
+                app:layout_constraintTop_toTopOf="@+id/tvExpense_desc" />
+
+            <ProgressBar
+                android:id="@+id/pBExpense"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:max="100"
+                android:progress="85"
+                android:progressTint="@color/pf_red_text_color"
+                android:secondaryProgressTint="@color/pf_light_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvExpense_desc"
+                tools:layout_editor_absoluteY="430dp" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:background="@drawable/duration_bg_pf"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pBExpense"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/btnWeekly"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:background="@drawable/btn_duration_selected_bg"
+                    android:padding="10dp"
+                    android:text="@string/weekly"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/pf_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnMonthly"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btnMonthly"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginEnd="@dimen/_8dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="@string/monthly"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/pf_dark_gray_text_color"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnQuarterly"
+                    app:layout_constraintStart_toEndOf="@id/btnWeekly"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/btnQuarterly"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:layout_marginEnd="@dimen/_2dp"
+                    android:layout_marginBottom="@dimen/_2dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    android:text="@string/yearly_pf"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/pf_dark_gray_text_color"
+                    app:cornerRadius="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnMonthly"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDailyAverageSpendingAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/nunitosans_bold_pf"
+                android:padding="@dimen/_4dp"
+                android:text="@string/kes_25_000_00"
+                android:textSize="@dimen/_18_sp_text_size"
+                android:textColor="@color/pf_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clDuration" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDailyAverageSpending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:text="@string/daily_average_spending"
+                android:textColor="@color/pf_dark_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDailyAverageSpendingAmount" />
+            <!--Ui component for our bar chart-->
+            <com.hadiidbouk.charts.ChartProgressBar
+                android:id="@+id/chartProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:gravity="center"
+                app:hdBarCanBeClick="true"
+                app:hdBarHeight="170dp"
+                app:hdBarRadius="5dp"
+                app:hdBarTitleColor="@color/pf_blue_color"
+                app:hdBarTitleMarginTop="9dp"
+                app:hdBarTitleSelectedColor="@color/pf_blue_color"
+                app:hdBarTitleTxtSize="12sp"
+                app:hdBarWidth="@dimen/_27dp"
+                app:hdEmptyColor="@color/pf_light_gray"
+                app:hdMaxValue="10"
+                app:hdPinBackgroundColor="@color/pin_background"
+                app:hdPinDrawable="@drawable/ic_pin_pf"
+                app:hdPinMarginBottom="55dp"
+                app:hdPinMarginEnd="22dp"
+                app:hdPinMarginTop="10dp"
+                app:hdPinPaddingBottom="5dp"
+                app:hdPinTextColor="@color/pf_white"
+                app:hdPinTxtSize="17sp"
+                app:hdProgressClickColor="@color/pf_blue_color"
+                app:hdProgressColor="@color/progress"
+                app:hdProgressDisableColor="@color/progress_disable"
+                app:layout_constraintBottom_toTopOf="@id/tv_expenditure_breakdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDailyAverageSpending" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_expenditure_breakdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_bold_pf"
+                android:padding="@dimen/_4dp"
+                android:text="@string/expenditure_breakdown"
+                android:textColor="@color/pf_blue_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chartProgressBar" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvRVExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:backgroundTint="@color/card_expense_color"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_expenditure_breakdown">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rVExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="visible" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabExportReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/pf_light_blue"
+        android:text="@string/export_report"
+        android:textAllCaps="false"
+        android:textColor="@color/pf_white"
+        app:iconTint="@color/pf_white"
+        app:icon="@drawable/ic_export_report_pf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

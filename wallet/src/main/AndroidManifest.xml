@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ekenya.rnd.wallet">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_etourism">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <application>
+        <activity
+            android:name="com.ekenya.rnd.wallet.WalletMainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.WalletModule" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="12451000"
+            tools:replace="android:value" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDLolpqElwt69jNpc7n0_PQq_gLB_lQJgc"
+            tools:replace="android:value" />
+    </application>
+</manifest>

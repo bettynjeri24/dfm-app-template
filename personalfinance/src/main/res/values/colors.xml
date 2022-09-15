@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#083273</color>
+    <color name="purple_500">#083273</color>
+    <color name="purple_700">#083273</color>
+    <color name="teal_200">#C6C8C8</color>
+    <color name="teal_700">#C6C8C8</color>
+
+    <color name="pf_black">#FF000000</color>
+    <color name="pf_white">#FFFFFFFF</color>
+    <color name="pf_blue_color">#083273</color>
+    <color name="pf_light_gray">#E6E4E4</color>
+    <color name="pf_light_gray2">#F7F7F7</color>
+    <color name="pf_dark_gray">#4D4F5C</color>
+    <color name="pf_dark_gray_text">#707070</color>
+    <color name="pf_light_blue">#1AA7E1</color>
+    <color name="pf_dark_gray_text_color">#6F7070</color>
+    <color name="pf_green">#41C619</color>
+
+    <color name="textinputlayout_bordercolor">#666666</color>
+    <color name="pf_red_text_color">#B51F1F</color>
+    <color name="card_expense_color">#F8F8F8</color>
+
+    <color name="empty">@android:color/transparent</color>
+    <color name="progress">#147AD6</color>
+    <color name="progress_disable">#4bffffff</color>
+    <color name="progress_click">#F2912C</color>
+    <color name="pin_background">#E2335E</color>
+    <color name="pin_text">#ffffff</color>
+    <color name="bar_title_color">#B6BDD5</color>
+    <color name="bar_title_selected_color">#FFFFFF</color>
+</resources>

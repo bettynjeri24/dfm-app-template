@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/withdrawMoneyFragmentWallet2">
+
+
+    <fragment
+        android:id="@+id/withdrawFromAgentFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.withdraw.WithdrawFromAgentFragmentWallet"
+        android:label="fragment_withdraw_from_agent_wallet"
+        tools:layout="@layout/fragment_withdraw_from_agent_wallet" />
+
+    <fragment
+        android:id="@+id/cardlessWithdrawalFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.withdraw.CardlessWithdrawalFragmentWallet"
+        android:label="fragment_cardless_withdrawal_wallet"
+        tools:layout="@layout/fragment_cardless_withdrawal_wallet" />
+
+    <fragment
+        android:id="@+id/withdrawMoneyFragmentWallet2"
+        android:name="com.ekenya.rnd.wallet.ui.withdraw.StartWithdrawMoneyFragmentWallet"
+        android:label="fragment_withdraw_money_wallet"
+        tools:layout="@layout/fragment_withdraw_money_wallet">
+        <action
+            android:id="@+id/action_withdrawMoneyFragmentWallet2_to_withdrawFromAgentFragmentWallet"
+            app:destination="@id/withdrawFromAgentFragmentWallet" />
+        <action
+            android:id="@+id/action_withdrawMoneyFragmentWallet2_to_cardlessWithdrawalFragmentWallet"
+            app:destination="@id/cardlessWithdrawalFragmentWallet" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/successfulFragmentWallet"
+        android:name="com.ekenya.rnd.common.successful.SuccessfulFragmentCommon"
+        android:label="fragment_sucessful_wallet"
+        tools:layout="@layout/fragment_sucessful_wallet" />
+
+    <fragment
+        android:id="@+id/commonAuthFragment"
+        android:name="com.ekenya.rnd.common.auth.CommonAuthFragment"
+        android:label="CommonAuthFragment" />
+
+</navigation>

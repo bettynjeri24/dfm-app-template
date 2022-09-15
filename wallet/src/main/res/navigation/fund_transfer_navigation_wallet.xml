@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fundsTransferFragmentWallet">
+    <fragment
+        android:id="@+id/fundsTransferFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.FundsTransferFragmentWallet"
+        android:label="fragment_funds_transfer_wallet"
+        tools:layout="@layout/fragment_fund_transfer_wallet">
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_pesaLinkToPhoneFragmentWallet"
+            app:destination="@id/pesaLinkToPhoneFragmentWallet" />
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_pesalinkToAccountFragmentWallet"
+            app:destination="@id/pesalinkToAccountFragmentWallet" />
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_ownTransferFragmentWallet"
+            app:destination="@id/ownTransferFragmentWallet" />
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_internalTransferFragmentWallet"
+            app:destination="@id/internalTransferFragmentWallet" />
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_rtgsFragmentWallet"
+            app:destination="@id/rtgsFragmentWallet" />
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_eftFragmentWallet"
+            app:destination="@id/eftFragmentWallet" />
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_mainMobileMoneyFundTransferWalletFragment"
+            app:destination="@id/mainMobileMoneyFundTransferWalletFragment" />
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_pesalinkToCardFragmentWallet"
+            app:destination="@id/pesalinkToCardFragmentWallet" />
+        <action
+            android:id="@+id/action_fundsTransferFragmentWallet_to_pesaLinkSettingsFragmentWallet"
+            app:destination="@id/pesaLinkSettingsFragmentWallet" />
+    </fragment>
+    <fragment
+        android:id="@+id/pesaLinkToPhoneFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.pesalink.tophone.PesaLinkToPhoneFragmentWallet"
+        android:label="fragment_pesa_link_to_phone_wallet"
+        tools:layout="@layout/fragment_pesa_link_to_phone_wallet" />
+    <fragment
+        android:id="@+id/pesalinkToAccountFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.pesalink.toaccount.PesalinkToAccountFragmentWallet"
+        android:label="fragment_pesalink_to_account_wallet"
+        tools:layout="@layout/fragment_pesalink_to_account_wallet" />
+    <fragment
+        android:id="@+id/ownTransferFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.banktransfers.owntransfer.OwnTransferFragmentWallet"
+        android:label="fragment_own_transfer_wallet"
+        tools:layout="@layout/fragment_own_transfer_wallet" />
+    <fragment
+        android:id="@+id/internalTransferFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.banktransfers.internaltransfer.InternalTransferFragmentWallet"
+        android:label="fragment_internal_transfer_wallet"
+        tools:layout="@layout/fragment_internal_transfer_wallet" />
+    <fragment
+        android:id="@+id/rtgsFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.banktransfers.rtgs.RtgsFragmentWallet"
+        android:label="fragment_rtgs_wallet"
+        tools:layout="@layout/fragment_rtgs_wallet" />
+    <fragment
+        android:id="@+id/eftFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.banktransfers.eft.EftFragmentWallet"
+        android:label="fragment_eft_wallet"
+        tools:layout="@layout/fragment_eft_wallet" />
+    <fragment
+        android:id="@+id/mainMobileMoneyFundTransferWalletFragment"
+        tools:layout="@layout/fragment_main_mobile_money_ft_wallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.mobile_money.MainMobileMoneyFundTransferWalletFragment"
+        android:label="MainMobileMoneyFundTransferWalletFragment" >
+        <action
+            android:id="@+id/action_mainMobileMoneyFundTransferWalletFragment_to_mobileMoneyFundTransferWalletFragment"
+            app:destination="@id/mobileMoneyFundTransferWalletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileMoneyFundTransferWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.mobile_money.MobileMoneyFundTransferWalletFragment"
+        android:label="fragment_mobile_mobey_ft_wallet"
+        tools:layout="@layout/fragment_mobile_mobey_ft_wallet" >
+        <action
+            android:id="@+id/action_mobileMoneyFundTransferWalletFragment_to_fragmentSelectContactWallet"
+            app:destination="@id/fragmentSelectContactWallet" />
+    </fragment>
+    <!--    /////////////////////////////////////////////////////-->
+    <fragment
+        android:id="@+id/successfulFragmentWallet"
+        android:name="com.ekenya.rnd.common.successful.SuccessfulFragmentCommon"
+        android:label="fragment_sucessful_wallet"
+        tools:layout="@layout/fragment_sucessful_wallet" />
+    <fragment
+        android:id="@+id/commonAuthFragment"
+        android:name="com.ekenya.rnd.common.auth.CommonAuthFragment"
+        android:label="CommonAuthFragment" />
+    <fragment
+        android:id="@+id/fragmentSelectContactWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.mobile_money.selectcontacts.FragmentSelectContactWallet"
+        tools:layout="@layout/fragment_select_contact_wallet"
+        android:label="FragmentSelectContactWallet" >
+        <action
+            android:id="@+id/action_fragmentSelectContactWallet_to_fragmentSplitSendToMobileMoneyWallet"
+            app:destination="@id/fragmentSplitSendToMobileMoneyWallet" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSplitSendToMobileMoneyWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.mobile_money.selectcontacts.FragmentSplitSendToMobileMoneyWallet"
+        android:label="FragmentSplitSendToMobileMoneyWallet" />
+    <fragment
+        android:id="@+id/pesalinkToCardFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.pesalink.tocard.PesalinkToCardFragmentWallet"
+        android:label="fragment_pesalink_to_card_wallet"
+        tools:layout="@layout/fragment_pesalink_to_card_wallet" />
+    <fragment
+        android:id="@+id/pesaLinkSettingsFragmentWallet"
+        android:name="com.ekenya.rnd.wallet.ui.fundtransfer.pesalink.settings.PesaLinkSettingsFragmentWallet"
+        android:label="fragment_pesalink_settings_wallet"
+        tools:layout="@layout/fragment_pesalink_settings_wallet" />
+    <!--    /////////////////////////////////////////////////////-->
+</navigation>

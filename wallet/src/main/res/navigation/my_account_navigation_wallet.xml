@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/tabHolderMyAccountsFragment">
+
+
+    <fragment
+        android:id="@+id/addAccountWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.myaccount.AddAccountWalletFragment"
+        android:label="fragment_add_account_wallet"
+        tools:layout="@layout/fragment_add_account_wallet" />
+    <fragment
+        android:id="@+id/myAccountDetailsWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.myaccount.MyAccountDetailsPremierWalletFragment"
+        android:label="fragment_my_account_details_wallet"
+        tools:layout="@layout/fragment_my_account_details_wallet" />
+    <fragment
+        android:id="@+id/miniStatementAccountWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.myaccount.MiniStatementAccountWalletFragment"
+        android:label="MiniStatementAccountWalletFragment"
+        tools:layout="@layout/fragment_mini_statement_account_wallet" />
+    <fragment
+        android:id="@+id/fullStatementAccountWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.myaccount.FullStatementAccountWalletFragment"
+        android:label="fragment_full_statement_account_wallet"
+        tools:layout="@layout/fragment_full_statement_account_wallet" />
+    <fragment
+        android:id="@+id/checkBookRequestAccountWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.myaccount.CheckBookRequestAccountWalletFragment"
+        android:label="fragment_check_request_account_wallet"
+        tools:layout="@layout/fragment_check_request_account_wallet" />
+
+    <fragment
+        android:id="@+id/withdrawMyAccountWalletFragment"
+        android:name="com.ekenya.rnd.wallet.ui.myaccount.WithdrawMyAccountWalletFragment"
+        android:label="fragment_withdraw_my_account_wallet"
+        tools:layout="@layout/fragment_withdraw_my_account_wallet" />
+
+    <!--    /////////////////////////////////////////////////////-->
+    <fragment
+        android:id="@+id/successfulFragmentWallet"
+        android:name="com.ekenya.rnd.common.successful.SuccessfulFragmentCommon"
+        android:label="fragment_sucessful_wallet"
+        tools:layout="@layout/fragment_sucessful_wallet" />
+    <fragment
+        android:id="@+id/commonAuthFragment"
+        android:name="com.ekenya.rnd.common.auth.CommonAuthFragment"
+        android:label="CommonAuthFragment" />
+    <fragment
+        android:id="@+id/tabHolderMyAccountsFragment"
+        android:name="com.ekenya.rnd.wallet.ui.myaccount.tabs.TabHolderMyAccountsFragment"
+        android:label="fragment_tab_holder_my_accounts_wallet"
+        tools:layout="@layout/fragment_tab_holder_my_accounts_wallet" />
+    <!--    /////////////////////////////////////////////////////-->
+</navigation>

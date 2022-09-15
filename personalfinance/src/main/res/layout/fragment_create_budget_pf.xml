@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.budgets.CreateBudgetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/pf_blue_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:titleTextColor="@color/pf_white"
+            tools:title="@string/budgets" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_how_much_would"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:fontFamily="@font/nunitosans_bold_pf"
+            android:padding="@dimen/_4dp"
+            android:text="@string/how_much_would_you_like_to_budget_for"
+            android:textAlignment="textStart"
+            android:textColor="@color/pf_blue_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tIlAmount"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="24dp"
+            app:expandedHintEnabled="false"
+            app:boxStrokeColor="@color/pf_black"
+            app:hintTextColor="@color/pf_black"
+            app:hintAnimationEnabled="true"
+            app:boxCornerRadiusBottomEnd="@dimen/_8dp"
+            app:boxCornerRadiusBottomStart="@dimen/_8dp"
+            app:boxCornerRadiusTopStart="@dimen/_8dp"
+            app:boxCornerRadiusTopEnd="@dimen/_8dp"
+            app:hintEnabled="true"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_how_much_would">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:hint="Enter Amount"
+                android:inputType="number"
+                android:minHeight="@dimen/_48dp"
+                android:textSize="@dimen/_14_sp_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tIlCycle"
+            style="@style/exposedDropdownMenuCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/cycle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tIlAmount">
+
+            <AutoCompleteTextView
+                android:id="@+id/aCtCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:hint="@string/eg_month"
+                android:inputType="none"
+                android:minHeight="@dimen/_48dp"
+                android:textSize="@dimen/_14_sp_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tIlSelectCategories"
+            style="@style/exposedDropdownMenuCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/select_categories"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tIlCycle">
+
+            <AutoCompleteTextView
+                android:id="@+id/aCtSelectCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:hint="@string/eg_all"
+                android:inputType="none"
+                android:minHeight="@dimen/_48dp"
+                android:textSize="@dimen/_14_sp_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_select_accounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16dp"
+            android:text="@string/select_accounts_to_be_used_for_your_budget"
+            android:textColor="@color/pf_blue_color"
+            app:layout_constraintStart_toStartOf="@+id/tIlSelectCategories"
+            app:layout_constraintTop_toBottomOf="@+id/tIlSelectCategories" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tIlSelectAccount"
+            style="@style/exposedDropdownMenuCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/select_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_select_accounts">
+
+            <AutoCompleteTextView
+                android:id="@+id/aCtSelectAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:hint="@string/eg_account"
+                android:inputType="none"
+                android:minHeight="@dimen/_48dp"
+                android:textSize="@dimen/_14_sp_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_32dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_32dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:backgroundTint="@color/pf_light_blue"
+            android:padding="10dp"
+            android:text="@string/continue_btn"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_goneMarginBottom="@dimen/_32dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

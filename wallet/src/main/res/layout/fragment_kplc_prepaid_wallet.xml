@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.bills.KplcPrepaidFragmentWallet">
+
+    <include
+        android:id="@+id/clToolBar"
+        layout="@layout/custom_toolbar_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/toolbarCenter"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/clToolBar"
+        app:layout_constraintEnd_toEndOf="@id/clToolBar"
+        app:layout_constraintStart_toStartOf="@id/clToolBar"
+        app:layout_constraintTop_toTopOf="@id/clToolBar" />
+
+    <ImageView
+        android:id="@+id/imgTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/kplc_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarCenter" />
+
+    <TextView
+        android:id="@+id/tvMeterNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16_dp"
+        android:layout_marginTop="@dimen/margin_16_dp"
+        android:fontFamily="@font/nunitosans_semibold_wallet"
+        android:text="@string/meterNumber"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgTop" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputMeterNumber"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16_dp"
+        android:layout_marginTop="@dimen/margin_between_elements"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/meter_number_title_hint"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMeterNumber">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMeterNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:hint="@string/meter_number_hint"
+            android:inputType="number"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clZukuPresentment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputMeterNumber">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputAccountName"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/account_name_hint"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAccountName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/person_name_hint"
+                android:inputType="text"
+                android:padding="@dimen/_16dp"
+                android:singleLine="true"
+                android:textSize="@dimen/_16sp_text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputSelectAccount"
+            style="@style/exposedDropdownMenuCustom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/select_account_wallet"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewPayFrom">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/actSelectAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:inputType="none"
+                android:hint="@string/select_account_wallet"
+                android:minHeight="48dp"
+                android:padding="@dimen/_16dp"
+                android:singleLine="true"
+                android:textSize="@dimen/_16sp_text_size"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/textViewPayFrom"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_16_dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:text="@string/pay_from_text"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputAmount" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputAmount"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/enter_amount_hint_top"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputAccountName">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/price_hint"
+                android:inputType="number"
+                android:padding="@dimen/_16dp"
+                android:singleLine="true"
+                android:textSize="@dimen/_16sp_text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewScheduleBill"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/nunitosans_bold_wallet"
+            android:text="@string/schedule_this_bill"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toStartOf="@+id/switchSchedule"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputSelectAccount" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="@dimen/margin_16_dp"
+            android:theme="@style/WalletSwitch"
+            android:thumbTint="#707070"
+            android:trackTint="#B6B3B3"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewScheduleBill"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewScheduleBill"
+            app:layout_constraintTop_toBottomOf="@id/textInputSelectAccount" />
+
+        <TextView
+            android:id="@+id/textViewRecentBills"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:text="Schedule your recent bills here"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewScheduleBill" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputFrequency"
+            style="@style/exposedDropdownMenuCustom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/select_frequency_wallet"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewRecentBills"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/actSelectFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:inputType="none"
+                android:minHeight="48dp"
+                android:hint="@string/eg_monthly_wallet"
+                android:padding="@dimen/_16dp"
+                android:singleLine="true"
+                android:textSize="@dimen/_16sp_text_size"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputNextDate"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/next_date_top_hint"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputFrequency">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNextDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableEnd="@drawable/ic_date"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/eg_01_01_1988_hint"
+                android:inputType="date"
+                android:padding="@dimen/_16dp"
+                android:singleLine="true"
+                android:textSize="@dimen/_16sp_text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16_dp"
+        android:layout_marginEnd="@dimen/margin_16_dp"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:background="@drawable/btn_rounded_corners_filled_wallet"
+        android:backgroundTint="@color/light_blue"
+        android:fontFamily="@font/nunitosans_extrabold_wallet"
+        android:text="@string/btn_continue_text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

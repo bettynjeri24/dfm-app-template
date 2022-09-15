@@ -1,0 +1,1204 @@
+<resources>
+    <string name="app_name">Finance Trust Bank</string>
+    <string name="splash_screen_description" translatable="false">Splash Screen Description</string>
+    <string name="login_description">Login Description</string>
+    <string name="splash_screen" translatable="false">Splash Screen</string>
+    <string-array name="advertisement_display_time">5000</string-array>
+    <string name="test">Test</string>
+    <string name="advertisement_display_time">Test</string>
+    <string name="long_test">Long test description text should go here. This is just some dummy data</string>
+    <string name="skip">skip</string>
+    <string name="mobile_no">Enter Mobile Number</string>
+    <string name="pin">PIN</string>
+    <string name="forgot_pin"><u>Forgot PIN?</u></string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="terms_and_conditions">By using this app, you agree to the Terms and Conditions</string>
+    <string name="title_activity_main_menu" translatable="false">MainMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="home_wallet">Wallet</string>
+    <string name="manage_profile">Manage Profile</string>
+    <string name="tell_a_friend">Tell a friend</string>
+    <string name="log_out">Log out</string>
+    <string name="churchill" translatable="false">Churchill</string>
+    <string name="events">Events</string>
+    <string name="news">News</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="talent_search">Talent Search</string>
+    <string name="social_media">Social Media</string>
+    <string name="churchill_foundation" translatable="false">Sidian Bank </string>
+    <string name="advertise">Advertise</string>
+    <string name="bill_manager">Bill Manager</string>
+    <string name="help">Help</string>
+    <string name="packages">Packages</string>
+    <string name="home_ads">Home Ads</string>
+    <string name="churchill_unlimited" translatable="false">Sidian Bank </string>
+    <string name="back">Back</string>
+    <string name="notification">Notification</string>
+    <string name="my_notifications">My Notifications</string>
+    <string name="notification_count" translatable="false">2</string>
+    <string name="churchill_shows" translatable="false">Churchill Shows</string>
+    <string name="food_and_drinks">Food &amp; Drinks</string>
+    <string name="travel">Travel</string>
+    <string name="shows_and_events" translatable="false">Shows &amp; Events</string>
+    <string name="others">Others</string>
+    <string name="exclusives">Exclusives</string>
+    <string name="churchill_n_shows" translatable="false">Churchill \nShows</string>
+    <string name="live_stream">Live  Stream</string>
+    <string name="churchill_team" translatable="false">Sidian Bank  \nTeam</string>
+    <string name="my_name">My Name</string>
+    <string name="churchill_events" translatable="false">Sidian Bank  \nEvents</string>
+    <string name="other_events">Other  Events</string>
+    <string name="my_tickets">My Tickets</string>
+    <string name="send_money">Send \nMoney</string>
+    <string name="booking">Booking</string>
+    <string name="investments">Investments</string>
+    <string name="coming_soon" translatable="false">Coming Soon</string>
+    <string name="ok">OK</string>
+    <string name="share">Share</string>
+    <string name="kenya" translatable="false">Kenya</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="enter_recipient_name">Enter Recipient Name</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="enter_all_field_wallet">Enter Required data</string>
+    <string name="source_of_funds">Source of funds</string>
+    <string name="churchill_wallet" translatable="false">boa   \nWallet</string>
+    <string name="credit_card">Credit  Card</string>
+    <string name="proceed">proceed</string>
+    <string name="setting_things">Preparing to launch ✈</string>
+    <string name="_0_00_KES" translatable="false">0.00  UGX</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="error_response">Service unavailable, try again later</string>
+    <string name="load_money">Load Money</string>
+    <string name="funds_transfer">Funds Transfer</string>
+    <string name="bills">Bills</string>
+    <string name="beneficiary">Beneficiary</string>
+    <string name="beneficiary_list">Beneficiary List</string>
+    <string name="statements">Statements</string>
+    <string name="merchant">Merchant</string>
+    <string name="merchant_payment">Merchant\nPayment</string>
+    <string name="link_card">Link card</string>
+    <string name="add_card">Add card</string>
+    <string name="my_cards">My cards</string>
+    <string name="select_category" translatable="false"><u>Select Category</u></string>
+    <string name="select_category_title">Select Category</string>
+    <string name="select_banner_size" translatable="false"><u>Select Banner Size</u></string>
+    <string name="website">Website (Optional)</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="submit">Submit</string>
+    <string name="disclaimer">Please note that the required advertisement banner size should atleast
+    be 1020px (width) by 450px (height)</string>
+    <string name="disclaimer_title">Disclaimer</string>
+    <string name="please_select_source">Please select source</string>
+    <string name="from_churchill_wallet">From Wallet</string>
+    <string name="other_churchill_wallet">Other Wallet</string>
+    <string name="my_phone">My Phone</string>
+    <string name="other_phone">Other Phone</string>
+    <string name="other_mobile_money">From Mobile</string>
+    <string name="other_credit_card">Credit Card</string>
+    <string name="from_card">From Card</string>
+    <string name="from_mpesa">From Mpesa</string>
+    <string name="send_to">Send to</string>
+    <string name="inquiries_list">inquiries list</string>
+    <string name="inquiries">Inquiries</string>
+    <string name="enter_merchant_id">Enter Merchant ID</string>
+    <string name="lookup">lookup</string>
+    <string name="please_link_your_card">please link your card</string>
+    <string name="select_card">Select Card</string>
+    <string name="card_number">Card Number</string>
+    <string name="select_currency">Select Currency</string>
+    <string name="expiry_month">Exp. Month</string>
+    <string name="expiry_year">Exp. Year</string>
+    <string name="cvv" translatable="false">CVV</string>
+    <string name="use_biometrics">Use Biometrics to login</string>
+    <string name="swipe_instruction_fingerprint">(Hello ***, use your fingerprint to log in \nor \nSwipe HERE to the left to use the keyboard )</string>
+    <string name="swipe_instruction_keyboard">(Enter your secure PIN \nor \nSwipe HERE to the right to use your fingerprint )</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="question_category_one"><u>QUESTION CATEGORY I</u></string>
+    <string name="question_category_two"><u>QUESTION CATEGORY II</u></string>
+    <string name="topic_one">Topic One</string>
+    <string name="topic_two">Topic Two</string>
+    <string name="topic_three">Topic Three</string>
+    <string name="topic_four">Topic Four</string>
+    <string name="change_pin"><u>Change PIN</u></string>
+    <string name="test_email">myemailaddress@gmail.com</string>
+    <string name="churchill_email_address" translatable="false"><u>info@standardbank.co.mw</u></string>
+    <string name="telephone">Telephone</string>
+    <string name="test_phone_no"><u>0712345678</u></string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="no_notifications">There are no notifications to display</string>
+    <string name="frequently_accessed_bills">(My frequently accessed bills)</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_1eg">Eg. 1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="id_number">ID Number</string>
+    <string name="d_o_b">Date of birth</string>
+    <string name="first_name">First Name</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="select_security_question">Select a security question</string>
+    <string name="enter_answer">Enter answer</string>
+    <string name="change_email_address"><u>Change Email Address</u></string>
+    <string name="pay_tv">Pay Tv</string>
+    <string name="nhif">Insurance</string>
+    <string name="pay_nhif">Pay Insurance</string>
+    <string name="county_payments">Government \nPayments</string>
+    <string name="county_payments_title">Government Payments</string>
+    <string name="prepaid">Prepaid</string>
+    <string name="postpaid">Postpaid</string>
+    <string name="select_mobile_network">Select Mobile Network</string>
+    <string name="to_self">To self</string>
+    <string name="to_other">To Other</string>
+    <string name="purchase">Purchase</string>
+    <string name="pay">Pay …</string>
+    <string name="select_postpaid_package">Select postpaid package</string>
+    <string name="buy_tokens">Buy Tokens</string>
+    <string name="enter_meter_number">Enter Meter Number</string>
+    <string name="select_county">Select County</string>
+    <string name="select_service">Select Service</string>
+    <string name="membership_number">Policy number</string>
+    <string name="penalty">Penalty</string>
+    <string name="enter_account_number">Enter Account Number</string>
+    <string name="smart_card_number">Smart card number</string>
+    <string name="change">Change</string>
+    <string name="current_pin">Current PIN</string>
+    <string name="new_pin">New PIN</string>
+    <string name="confirm_pin">Confirm PIN</string>
+    <string name="subscribe_to_view">⌛ Please subscribe to view this content</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="subscribe_using">Subscribe &#8230;</string>
+    <string name="select_subscription">Please select your preferred subscription</string>
+    <string name="week_plan">UGX 0/week</string>
+    <string name="monthly_plan">UGX 0/month</string>
+    <string name="read_more">Read more</string>
+    <string name="country">Country</string>
+    <string name="recipient_name">Recipient Name</string>
+    <string name="recipient_account_no">Recipient Account No.</string>
+    <string name="amount_sent">Amount Sent</string>
+    <string name="currency">Currency</string>
+    <string name="paid_wallet">Paid</string>
+    <string name="reference_no">Reference No.</string>
+    <string name="paid_on_date">Paid on date</string>
+    <string name="exchange_rate">Exchange Rate</string>
+    <string name="total_amount_debited">Total Amount Debited</string>
+    <string name="_name">Name</string>
+    <string name="amount_loaded">Amount Loaded</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="service_unavailable">Service unavailable, \nPlease try again later</string>
+    <string name="your_load_transaction_details">LOAD MONEY TRANSACTION DETAILS</string>
+    <string name="your_funds_transfer_transaction_details">FUNDS TRANSFER TRANSACTION DETAILS</string>
+    <string name="amount_to_send">Amount to send</string>
+    <string name="default_currency">UGX</string>
+    <string name="select_a_linked_card">Select a linked card</string>
+    <string name="loaded_via">Loaded Via</string>
+    <string name="loaded_on_date">Loaded on date</string>
+    <string name="beneficiary_info">Beneficiary Info</string>
+    <string name="gender">Gender</string>
+    <string name="parent_s_guardian_id_no">Parent\'s/Guardian ID No</string>
+    <string name="beneficiary_details">Beneficiary Details</string>
+    <string name="beneficiary_phone">Beneficiary phone</string>
+    <string name="beneficiary_limit">Beneficiary daily Limit</string>
+    <string name="register_beneficiary">Register Beneficiary</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="mini_statement">Mini Statement</string>
+    <string name="last_one_month">Last one month</string>
+    <string name="last_two_months">Last two months</string>
+    <string name="last_three_months">Last three months</string>
+    <string name="full_statement">Full Statement</string>
+    <string name="add_bill">Add Bill</string>
+    <string name="select_biller">Select Biller</string>
+    <string name="save">Save Bill</string>
+    <string name="enter_account_name">Enter Account Name</string>
+    <string name="menu_dot">•</string>
+    <string name="bill_shortcut">Tap the + icon \nto add shortcuts for your bills</string>
+    <string name="beneficiary_list_page">Your added beneficiaries will show up here</string>
+    <string name="something_went_wrong">Oops&#8230; we\'re working on this, \nplease try again later</string>
+    <string name="no_deals_found">No deals found,  check in again later</string>
+    <string name="deals_error">No deals found</string>
+    <string name="congratulations_joe">Congratulations @Joe,</string>
+
+    <string-array name="advertisement_categories">
+        <item>Advert</item>
+        <item>Event</item>
+        <item>Investment</item>
+    </string-array>
+
+    <string-array name="mobile_networks">
+        <item>SAFARICOM</item>
+        <item>Airtel</item>
+        <item>TELKOM</item>
+    </string-array>
+
+    <string-array name="banner_sizes" />
+
+    <string-array name="card_items">
+        <item>Visa</item>
+        <item>MasterCard</item>
+        <item>Proprietary</item>
+    </string-array>
+
+    <string-array name="currency_items">
+        <!--        <item>KES</item>-->
+        <item>KE</item>
+        <item>US</item>
+        <item>UG</item>
+        <item>TZ</item>
+    </string-array>
+
+    <string-array name="expiry_month_items">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+    <string-array name="security_question">
+        <item>Your first pet\'s name</item>
+        <item>The name of your elementary school</item>
+        <item>Your best friend\'s nickname</item>
+        <item>Your favourite sport\'s team</item>
+        <item>Your favourite writer</item>
+        <item>Your favourite singer</item>
+        <item>Your favourite actor</item>
+        <item>Your favourite song</item>
+        <item>Make and model of your first car</item>
+    </string-array>
+
+    <string-array name="biller_categories">
+        <item>Airtime</item>
+        <item>Electricity</item>
+        <item>Pay Tv</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="title_activity_repay_loan">Repay Loan</string>
+    <string name="accept_terms_and_conditions" translatable="false"><a href="http://www.boa.co.ke/">Accept Terms And Conditions</a></string>
+    <string name="kes_kes">\@KES UGX</string>
+
+    <string name="kes_bal">UGX @bal</string>
+    <string name="date" translatable="false">\@date</string>
+    <string name="bal_kes" translatable="false">\@bal UGX</string>
+    <string name="goal_goal">Goal: @goal</string>
+    <string name="points" translatable="false">\@points</string>
+    <string name="card_name">Card Name</string>
+    <string name="acc_no" translatable="false">Acc/No</string>
+    <string name="card_type">Card Type</string>
+    <string name="eclectics_welfare">Finance Trust Bank Welfare</string>
+    <string name="bal_currency" translatable="false">\@bal UGX</string>
+    <string name="count_members">\@count members</string>
+    <string name="amount" translatable="false">\@amount</string>
+    <string name="desc" translatable="false">\@desc</string>
+    <string name="discount">\@discount</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="a_c_no" translatable="false">A/C No</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="group_n_account">Group \nAccount</string>
+    <string name="diaspora">Diaspora</string>
+    <string name="account_name">Account Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="pay_loan">Pay Loan</string>
+    <string name="total_pending_will_be">Total Pending will be</string>
+    <string name="kes_0_00_wallet">Kes 00.00</string>
+    <string name="_02_may_2019">02 May 2019</string>
+    <string name="due_date">Due Date</string>
+    <string name="enter_amout_to_repay">Enter Amout To Repay</string>
+    <string name="repay_pending_loan_to_increase_loan_limit">Repay Pending Loan to increase loan limit</string>
+    <string name="pay_from_wallet_account">Pay From Wallet Account</string>
+    <string name="pay_from_mobile_money">Pay from Mobile Money</string>
+    <string name="pay_from_bank_account">Pay from Bank Account</string>
+    <string name="pay_from">Pay From</string>
+    <string name="pay_now">Pay now</string>
+    <string name="you_have_a_pending_loan_of">You have a pending loan of</string>
+    <string name="hi_joseph">Hi @Joseph,</string>
+    <string name="kindly_repay_today_to_increase_your_limit">Kindly repay today to increase your limit</string>
+    <string name="amount_kes">Amount </string>
+    <string name="status">Status</string>
+    <string name="no_previous_loan_records_available">No Previous Loan Records Available</string>
+    <string name="redeem_points">Redeem Points</string>
+    <string name="points_to_redeem">Points To Redeem</string>
+    <string name="ref_no">Ref No</string>
+    <string name="a_c_name" translatable="false">A/c Name</string>
+    <string name="enhance_request">Enhance Request</string>
+    <string name="you_have_insufficient_funds_n_to_complete_transaction_accept_a_enhance_service_of_kes_100_with_applicable_fee_of_kes_10_fee">You have insufficient funds  to complete transaction. Accept a Enhance service of UGX  100 with applicable fee of UGX  10 fee?</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="merchant_code">"    Merchant Code"</string>
+    <string name="merchant_store">Merchant Store</string>
+    <string name="merchantcode" translatable="false"> \@merchantcode </string>
+    <string name="merchantstore" translatable="false"> \@merchantstore </string>
+    <string name="accountnumber" translatable="false"> \@accountnumber </string>
+    <string name="n_n_n_npay_from_nmobile_money">Pay From  Mobile Money</string>
+    <string name="n_n_n_npay_from_n_account">Pay From  Account</string>
+    <string name="enter_amount_to_apply">Enter Amount to Apply</string>
+    <string name="apply_loan">Apply Loan</string>
+    <string name="amount_applied">Amount Applied</string>
+    <string name="charges">Charges</string>
+    <string name="total_payable">Total Payable</string>
+    <string name="withdrawal_successful">Withdrawal Successful</string>
+    <string name="withdrawal_of_ksh_ksh_from_agent_has_been_processed_successfully_withdrawal_code_is_has_been_sent_to_your_phone_use_the_code_within_5_mins">Withdrawal of UGX @ksh from @agent has been processed successfully. Withdrawal code is has been sent to your phone. Use the code within 5 mins.</string>
+    <string name="transaction_ref_transref">Transaction Ref: @transref</string>
+    <string name="complete">Complete</string>
+    <string name="send_transaction_message_n_to_my_phone">Send Transaction message  to My Phone</string>
+    <string name="daily_balance">Daily Balance</string>
+    <string name="credit">Credit</string>
+    <string name="debit">Debit</string>
+    <string name="large_debit">Large Debit</string>
+    <string name="large_credit">Large Credit</string>
+    <string name="sms">SMS</string>
+    <string name="email">Email</string>
+    <string name="no_records_found">No Records Found</string>
+    <string name="savings_account">Savings Account</string>
+    <string name="actual_balance">Actual Balance</string>
+    <string name="KES_bal">UGX  @bal</string>
+    <string name="select_account_to_deposit">Select Account To Deposit</string>
+    <string name="deposit_wallet">Deposit</string>
+    <string name="create_savings_account">Create Savings Account</string>
+    <string name="enter_amount_to_request">Enter Amount To Request</string>
+    <string name="send_request">Send request</string>
+    <string name="selfie_photo">Selfie Photo</string>
+    <string name="form_capture">Form Capture</string>
+    <string name="front_id_card">Front ID Card</string>
+    <string name="back_id_card">Back ID Card</string>
+    <string name="my_accounts">My Accounts</string>
+    <string name="create_group_account">Create Group Account</string>
+    <string name="loan_statements">Loan Statements</string>
+    <string name="load_wallet">Load Wallet</string>
+    <string name="hi_user_your">Hi @user, Your</string>
+    <string name="loan_limit_is">Loan Limit is</string>
+    <string name="savings_a_c">savings A/C</string>
+    <string name="loyalty_points">Loyalty Points</string>
+    <string name="total_points">Total Points</string>
+    <string name="redeem">Redeem</string>
+    <string name="remaining_npoints">Remaining  Points</string>
+    <string name="kes_34_098">UGX  34,098</string>
+    <string name="group_description">Group Description</string>
+    <string name="send_feedback">Send @feedback</string>
+    <string name="type_your_feedback">Type your @feedback</string>
+    <string name="target_amount">Target Amount</string>
+    <string name="initial_contribution">Initial Contribution</string>
+    <string name="period_months">Period (Months)</string>
+    <string name="create_account">Create Account</string>
+    <string name="name">Name</string>
+    <string name="message">Message</string>
+    <string name="send_message">Send Message</string>
+    <string name="quantity_to_buy">Quantity To Buy</string>
+    <string name="buy_deal">Buy Deal</string>
+    <string name="amount_to_pay_pay">Amount to pay: @pay</string>
+    <string name="agent_code">Agent Code</string>
+    <string name="add_bank_account">Add Bank Account</string>
+    <string name="atm_code">ATM Code</string>
+    <string name="amount_to_withdraw">Amount To Withdraw</string>
+    <string name="send">Send</string>
+    <string name="n_n_n_nscan_qr_ncode">Scan QR \nCode</string>
+    <string name="n_n_n_ntype_atm_n_number">Type ATM\nNumber</string>
+    <string name="n_n_n_ntype_agent_n_number">Type Agent\n Number.</string>
+    <string name="member_name">Member Name</string>
+    <string name="selected_contacts">Selected Contacts</string>
+    <string name="add_member">Add Member</string>
+    <string name="select_bank_branch">Select Bank Branch</string>
+    <string name="select_bank">Select Bank</string>
+    <string name="link_bank_account">Link Bank Account</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="provide_name">Provide Name</string>
+    <string name="provide_email_address">Provide EMail Address</string>
+    <string name="provide_phone_number">Provide Phone Number</string>
+    <string name="provide_message">Provide Message</string>
+    <string name="message_sent_successfully">Message Sent Successfully</string>
+    <string name="kes_0_0_0">Kes 1,000.00</string>
+    <string name="success_response_part_two">has been processed and disbursement will be sent to your account</string>
+    <string name="success_response_part_one">Your application for a loan of UGX</string>
+    <string name="successful">Successful</string>
+    <string name="okey">Ok</string>
+    <string name="loan_statement">Loan Statement</string>
+    <string name="provide_amount_to_repay">Provide amount to repay</string>
+    <string name="amount_less_than_zero_error">Amount to repay must be more than UGX  0</string>
+    <string name="fund_source_error">Select Fund Source (Account/Mobile Money)</string>
+    <string name="repayment_from_wallet_response_one">Your Loan Repayment Of  UGX</string>
+    <string name="repayment_from_wallet_response_two">has been processed successfully. Your new loan balance is UGX</string>
+    <string name="repayment_from_mno_response_one">Your Loan Repayment Of  UGX</string>
+    <string name="repayment_from_mno_response_two">request via Mobile Money has been sent successfully.   Follow instructions on your phone to complete repayment</string>
+    <string name="curent_pin_not_there">Please enter your current PIN</string>
+    <string name="current_pin_short">Your Current PIN should be 4 digits</string>
+    <string name="no_new_pin">Please enter your new PIN</string>
+    <string name="new_pin_too_short">Your New PIN should be 4 digits</string>
+    <string name="confirmation_pin_missing">Please enter your confirmation PIN</string>
+    <string name="confirmation_pin_too_short">Your Confirm PIN should be 4 digits</string>
+    <string name="server_error">Oops...   Our servers are down,</string>
+    <string name="internet_error">Kindly check your internet connection</string>
+    <string name="auth_failed">Authentication failed! Please try again</string>
+    <string name="auth_successful">Successfully verified!</string>
+    <string name="phone_missing">Please enter your mobile number</string>
+    <string name="invalid_phone">Mobile number is invalid</string>
+    <string name="missing_pin">Please enter your PIN</string>
+    <string name="pin_too_short">PIN number should be 4 digits</string>
+    <string name="connection_error">Experienced Connectivity Error</string>
+    <string name="connectivity_error">Experienced Connectivity Error</string>
+    <string name="enter_phone_number_error">Please enter your mobile no</string>
+    <string name="enter_id_number_error">Please enter your National ID no</string>
+    <string name="enter_dob_error">Please select your date of birth</string>
+    <string name="enter_your_email">Please enter your email</string>
+    <string name="enter_first_name">Please enter your first name</string>
+    <string name="enter_middle_name_error">Please enter your middle name</string>
+    <string name="enter_last_name_error">Please enter your last name</string>
+    <string name="select_answer_error">Please select a question</string>
+    <string name="enter_answer_error">Please enter your answer</string>
+    <string name="capture_from_camera">Capture From Camera</string>
+    <string name="capture_back_id">Capture Back ID Image</string>
+    <string name="ad_advert">Add Advert</string>
+    <string name="view_adaverts">View Adverts</string>
+    <string name="select_category_error">Please select a category</string>
+    <string name="select_banner_size_error">Please select the banner size</string>
+    <string name="set_start_date_error">Please set the start date</string>
+    <string name="set_end_date_error">Please set the end date</string>
+    <string name="internet_connection_error">Kindly check your internet connection</string>
+    <string name="subscription_successful">Subscriptions Successful</string>
+    <string name="withdraw_from_atm">Withdraw \nFrom ATM</string>
+    <string name="incorrect_atm_code">Amount / ATM code should contains numerics only</string>
+    <string name="my_account">My Account</string>
+    <string name="expenditure">Expenditure</string>
+    <string name="loan_analysis">Loan Analysis</string>
+    <string name="account_analysis">Account Analysis</string>
+    <string name="withdraw_from_agent">Withdraw \nFrom Agent</string>
+    <string name="agent_code_error">Provide agent code</string>
+    <string name="amount_to_withdraw_error">Provide amount</string>
+    <string name="amount_agent_code_error">Amount / Agent code should contains numerics only</string>
+    <string name="error_processing_request">Error processing request</string>
+    <string name="repay_loan_of_amount">Repay Loan of UGX</string>
+    <string name="apply_loan_instruction">Apply Loan</string>
+    <string name="invalid_email">Please enter your email</string>
+    <string name="email_not_valid">Email address in invalid</string>
+    <string name="create_savings_account_title">Create Savings Account</string>
+    <string name="provide_goal_error">Provide Goal</string>
+    <string name="provide_target_amount_error">Provide Target Amount</string>
+    <string name="increase_target_amount">Target Amount Should be greater than 100</string>
+    <string name="provide_initial_contribution">Provide initial contribution</string>
+    <string name="provide_saving_period">Provide Period you wish to save</string>
+    <string name="savings_account_created_successfully">Savings Account Created Successfully</string>
+    <string name="error_occurred">An error occurred while processing request</string>
+    <string name="savings_accounts_title">Saving Accounts</string>
+    <string name="target_amount_info">Target Amount:</string>
+    <string name="select_a_savings_account">Select A savings account</string>
+    <string name="deposit_to_savings_title">Deposit To Savings</string>
+    <string name="provide_amount_to_deposit_error">Provide amount to deposit</string>
+    <string name="savings_ministatement_title">Savings Ministatement</string>
+    <string name="withdraw_from_savings_title">Withdraw From Savings</string>
+    <string name="withdraw_wallet">Withdraw</string>
+    <string name="amount_to_withdraw_error_empty">Provide amount to withdraw</string>
+    <string name="withdraw_successful">Withdraw Successful</string>
+    <string name="request_money_from_friend_error">Request Money From A Friend</string>
+    <string name="amount_to_request_missing">Provide amount you wish to request</string>
+    <string name="request_money_success_one">Request to receive money from</string>
+    <string name="request_money_success_two">sent successfully</string>
+    <string name="merchant_code_missing">Provide Merchant Code</string>
+    <string name="invalid_merchant_code_reponse">Invalid Merchant Code</string>
+    <string name="provide_amount_to_pay_error">Provide Amount To Pay</string>
+    <string name="amount_to_pay_min">Amount provide must be above UGX  500</string>
+    <string name="processing_message_reponse">Processing ongoing, You will receive a message on   your phone</string>
+    <string name="transactions_done_title">Transactions done</string>
+    <string name="electricity">Electricity</string>
+    <string name="airtime">Airtime</string>
+    <string name="internet">Internet</string>
+    <string name="nhif_text">NHIF</string>
+    <string name="water">Water</string>
+    <string name="paid_loans_title">Paid Loans</string>
+    <string name="partialy_paid_loans">Partially Paid</string>
+    <string name="applied_loans">Partially Paid</string>
+    <string name="deposits_title">Deposit</string>
+    <string name="withdrawal_title">Withdrawal</string>
+    <string name="loans_title">Loans</string>
+    <string name="account_data_title">Account Data</string>
+    <string name="redeem_points_title">Redeem Points</string>
+    <string name="provide_points_to_retrive">Provide points to redeem</string>
+    <string name="redeem_response_one">You have redeemed</string>
+    <string name="redeem_response_two">Successfully</string>
+    <string name="insufficient_points_error">Insufficient Loyalty Points</string>
+    <string name="enter_amount_to_redeem">Please enter the amount</string>
+    <string name="amount_to_redeem_invalid">Please provide a valid amount</string>
+    <string name="link_bank_account_title">Link Bank Account</string>
+    <string name="no_bank_selected_error">Select Bank Branch</string>
+    <string name="accept_terms_first">Accept terms and conditions first</string>
+    <string name="bank_addition_response">Bank Account Added Successfully</string>
+    <string name="linked_bank_accounts">Linked Bank Accounts</string>
+    <string name="buy_deal_title">Buy Deal</string>
+    <string name="total_amount_to_pay">Total Amount To Pay:</string>
+    <string name="quantity_to_buy_missing">Provide quantity to buy</string>
+    <string name="agent_code_not_provided">Provide Agent Code</string>
+    <string name="deal_buying_successful">Deal bought successfully</string>
+    <string name="there_was_an_error_processing_request">Error processing request</string>
+    <string name="add_group_members_title">Add Group Members</string>
+    <string name="phone_number_not_provided">Provide Phone Number</string>
+    <string name="member_name_not_provided">Provide Member Name</string>
+    <string name="create_group_account_title">Create A Group Account</string>
+    <string name="group_created_succesfully_response">Group Created Successfully</string>
+    <string name="group_name_not_provided">Provide Group Name</string>
+    <string name="my_group_accounts">My Group Accounts</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_sent_suuceesfully">Feedback Sent Successfully</string>
+    <string name="select_feedback_type">Select feedback type</string>
+    <string name="provide_feedback">Provide feedback</string>
+    <string name="send_info">Send</string>
+    <string name="type_info">Type</string>
+    <string name="smart_card_number_not_provided">Please enter the smart card number</string>
+    <string name="invalid_smart_card_type">Smart card number is invalid</string>
+    <string name="provide_amount_to_pay">Provide amount to pay</string>
+    <string name="amount_to_pay_must_be_more_than_fifty">Amount must more than 50</string>
+    <string name="processing_ongoing">Processing Ongoing, You will recieve a message   on your phone once complete</string>
+    <string name="category_not_selected">Please select a category</string>
+    <string name="biller_not_selected">Please select a biller</string>
+    <string name="account_number_not_provided">Please enter the account number</string>
+    <string name="account_name_not_provided">Please enter the account name</string>
+    <string name="bill_saved_successfully">Bill saved successfully</string>
+    <string name="bills_title_wallet">Bill Payment</string>
+    <string name="receipts_title">RECEIPTS</string>
+    <string name="membership_number_not_probided">Please enter the membership number</string>
+    <string name="policy_number_is_invalid">Policy number is invalid</string>
+    <string name="amount_to_pay_is_empty">Please enter the amount</string>
+    <string name="amount_to_pay_is_not_valid">Amount is invalid</string>
+    <string name="account_number_is_not_provided">Please enter the account number</string>
+    <string name="account_number_is_not_valid">account number is invalid</string>
+    <string name="amount_is_not_provided">Please enter the amount</string>
+    <string name="amount_is_not_valid">Please enter a valid amount</string>
+    <string name="meter_number_is_invalid">Please enter the meter number</string>
+    <string name="meter_number_not_provide">Meter number is invalid</string>
+    <string name="select_Account">Please select the network</string>
+    <string name="select_account_wallet">Select Account</string>
+    <string name="select_package">Please select the package</string>
+    <string name="amount_exceeds_limit">Amount Exceeds Set Limit</string>
+    <string name="airtime_purchase_successful">Airtime purchased successfully</string>
+    <string name="failed_to_transact">Airtime purchase failed due to insufficient funds</string>
+    <string name="alerts_title">Alerts And Notifications</string>
+    <string name="first_name_missing">Please enter the first name</string>
+    <string name="last_name_missing">Please enter the last name</string>
+    <string name="dob_misssing">Please select the date of birth</string>
+    <string name="gender_missing">Please select the gender</string>
+    <string name="id_no_missing">Please enter the ID NO</string>
+    <string name="please_set_limit">Please enter the limit</string>
+    <string name="empty_string" translatable="false" />
+    <string name="story_line_one">Finance Trust Bank brings you a simple and smart way to manage your money in one place</string>
+    <string name="story_line_two">Remit your money to your loved ones anywhere in the world</string>
+    <string name="story_line_three">Manage your money by adding beneficiaries attached to your account</string>
+    <string name="story_line_four">Buy airtime, pay bills, and access a variety of products and services at the touch of the button</string>
+    <string name="next">Next</string>
+    <string name="manage_bills_title">MANAGE BILLS</string>
+    <string name="request_money">Request Money</string>
+    <string name="bank_account">Bank Account</string>
+    <string name="savings">Savings</string>
+    <string name="my_biz">My Biz</string>
+    <string name="locate_us">Locate Us</string>
+    <string name="no">Manual Registration</string>
+    <string name="yes">Capture ID details</string>
+    <string name="btn_continue_label">Continue</string>
+    <string name="sign_up_message">Signup</string>
+    <string name="sign_up_message2">Register</string>
+    <string name="click_here">Click here</string>
+    <string name="terms_text_msg">terms</string>
+    <string name="phone_lookup">Phone lookup</string>
+    <string name="blink">Blink</string>
+
+
+    <string name="action_info">Information</string>
+    <string name="config">BT Config</string>
+    <string name="actMain_msg_device_connecting">Connecting device&#8230;</string>
+    <string name="actMain_msg_device_connect_fail">Communication failure, Please Pair the Device &amp; retry</string>
+    <string name="actMain_msg_bluetooth_Bond_Success">Pairing successful</string>
+    <string name="actMain_msg_bluetooth_Bond_fail">Pairing failed</string>
+    <string name="actMain_msg_pair_pwd_error">Pairing password must be 4 digits</string>
+    <string name="actMain_menu_rescan">Rescan</string>
+    <string name="actDiscovery_msg_select_device">Select the device you need to connect</string>
+    <string name="actDiscovery_msg_not_find_device">Devices not found</string>
+    <string name="actDiscovery_msg_scaning_device">Searching for Bluetooth devices, Please wait&#8230;</string>
+    <string name="actDiscovery_msg_starting_device">Bluetooth is turned on&#8230;</string>
+    <string name="actDiscovery_msg_start_bluetooth_fail">Bluetooth turn on failed</string>
+    <string name="actDiscovery_msg_bluetooth_not_start">Bluetooth is not enabled</string>
+    <string name="actDiscovery_menu_scan">Scan</string>
+    <string name="actDiscovery_bond_bonded">Bonded</string>
+    <string name="actDiscovery_bond_nothing">Nothing</string>
+    <string name="actByteStream_btn_send_desc">Send button</string>
+    <string name="actByteStream_tv_receive_text">Data receive</string>
+    <string name="bardrate9600">9600 Bps / IBC\nDefault Selection</string>
+    <string name="bardrate115200">115200 Baud Rate</string>
+    <string name="ibc">IBC</string>
+    <string name="device_type_bredr">BR/EDR Bluetooth</string>
+    <string name="device_type_ble">Bluetooth Energy is Low</string>
+    <string name="msg_msg_bt_connect_lost">Bluetooth device connection is lost, try to reconnect</string>
+    <string name="Connect">Connect</string>
+    <string name="not_connected">Mobile is not connected with device</string>
+    <string name="bt_not_enabled_leaving">Bluetooth was not enabled. Exiting Application.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_not_connected">not connected</string>
+    <string name="actMain_msg_device_connect_succes">Bluetooth connection Successful</string>
+    <string name="hello_world">hello_world</string>
+    <string name="device_type_dumo">Duplex mode Bluetooth</string>
+    <string name="verinfo">Version:V1.17</string>
+    <string name="information">This application has been designed to work with Evolute Systems Leopard.\n\nLeopard Prowess SDK is available from Evolute Systems as per your request.</string>
+    <string name="welcome_to_wfp_scope">Welcome to Finance Trust Bank</string>
+    <string name="verify_using_face">Verify using Face</string>
+    <string name="verify_using_voice">Verify using Voice</string>
+    <string name="verify_using_fingerprint">Verify using FingerPrint</string>
+    <string name="to_activate_entitlement_verify_your_identity_using_one_of_the_models_listed_below">To activate entitlement, verify your identity using one of the models listed below</string>
+
+    <string name="sign_in_title">Sign in to Banking Authentication App. Use PIN number:</string>
+
+    <string name="hot_deals">Hot Deals</string>
+    <string name="title_select_auth_type">Please choose:</string>
+    <string name="auth_type_voice">Voice authentication</string>
+    <string name="auth_type_face">Facial authentication</string>
+    <string-array name="news_Sites">
+        <item>Peripherals</item>
+        <item>Printer</item>
+        <item>FPS </item>
+        <item>Magcard</item>
+        <item>Smartcard</item>
+        <item>Serial Port</item>
+        <item>Clscr</item>
+        <item>SAM</item>
+    </string-array>
+
+
+    <!--    moxtra strings-->
+
+
+    <string name="login_your_account">Login to Your Account</string>
+    <string name="hint_input_token">Your access token here.</string>
+    <string name="type_not_supported">Type Not Supported</string>
+    <string name="disable_downloading">Disable downloading</string>
+    <string name="enable_downloading">Enable downloading</string>
+    <string name="disable_renaming_chat">Disable renaming chat</string>
+    <string name="enable_renaming_chat">Enable renaming chat</string>
+    <string name="hide_notifications_setting">Hide Notifications Setting</string>
+    <string name="show_notifications_setting">Show Notifications Setting</string>
+    <string name="enable_whiteboard">Enable Whiteboard</string>
+    <string name="disable_whiteboard">Disable Whiteboard</string>
+    <string name="show_timeline_tabs">Show Timeline Tabs</string>
+    <string name="hide_timeline_tabs">Hide Timeline Tabs</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="sub_text_1">We simplify your banking life digitally\nTo enhance your transactions to be\nSeamless and convenient</string>
+    <string name="sub_text_2">You can now do a self registration via the\nApp with out need of going to the nearest\nBank branch</string>
+    <string name="sub_text_3">We simplify your banking life digitally\nTo enhance your transactions to be\nSeamless and convenient</string>
+    <string name="main_text_1">Mobile banking made simple,\nReliable and easy for all</string>
+    <string name="main_text_2">No more queuing at the bank,\nCreate your own account</string>
+    <string name="main_text_3">Mobile banking made simple,\nReliable and easy for all</string>
+    <string name="hello_text">Hello! Welcome to Finance Trust Bank Mobile\nBanking app</string>
+    <string name="welcome_text">Please provide your phone number so that we can fetch\nYour account details</string>
+    <string name="enter_your_pin_to_login">Enter your Pin to Login</string>
+    <string name="title_accountopening">Account Opening</string>
+    <string name="landing_page_text"><![CDATA[Welcome to Finance Trust Bank Mobile\nBanking! Stay cashless &\ntransact easily]]></string>
+    <string name="activate">ACTIVATE</string>
+    <string name="currency_code">Kes</string>
+    <string name="bank_instr">Branch Area: %1$s\n Address: Dorona House\n Tel: Toll Free: 9591\n Hours (Weekdays): 08:00 - 18:00\n Hours (Sat): Closed\n Hours (Sun): Closed</string>
+    <string name="_34_002_cash">34,002 UGX</string>
+    <string name="_400_898_cash">400,898 UGX</string>
+    <string name="currency_code_amt">UGX %1$s</string>
+    <string name="_0_00_kes">UGX</string>
+    <string name="pay_from_account">Finance Trust Bank Account</string>
+    <string name="electricity_prepaid">Umeme PrePaid</string>
+    <string name="electricity_postpaid">Umeme PostPaid</string>
+
+    <!---->
+
+
+    <string name="actual_mobile_no">Mobile Number</string>
+
+
+    <string name="gallery">Gallery</string>
+    <string name="albums">Albums</string>
+
+    <string name="salvador">Churchill</string>
+
+
+    <string name="shows">Shows</string>
+
+    <string name="scan_merchant_code">Enter/Scan Merchant Code</string>
+    <string name="make_payment">Make Payment</string>
+
+
+    <string name="_0_00_UGX">_ _  UGX</string>
+    <string name="price_no">(X 1 = 400 UGX)</string>
+
+    <string name="view_deal">Purchase Deal</string>
+    <string name="purchase_deal">Purchase Deal</string>
+    <string name="find_out_more">View</string>
+
+    <string name="contributors_name">Contributors Name</string>
+
+    <string name="nhif_membership_no">NHIF Membership No.</string>
+
+    <string name="contributed_via">Contributed Via</string>
+    <string name="charge_amount">Charge Amount</string>
+    <string name="extra_charge">Extra Charge</string>
+    <string name="excise_duty">Excise Duty</string>
+
+    <string name="due_amount">Due Amount</string>
+
+    <string name="transaction_details">TRANSACTION DETAILS</string>
+    <string name="your_funds_withdrawal_transaction_details">FUNDS WITHDRAWAL TRANSACTION DETAILS</string>
+    <string name="your_diaspora_transaction_details">DIASPORA TRANSACTION DETAILS</string>
+    <string name="nhif_payment_details">NHIF CONFIRM PAYMENT DETAILS</string>
+    <string name="foundation_contribution_details">FOUNDATION CONTRIBUTION DETAILS</string>
+    <string name="amount_to_contribute">Amount to contribute</string>
+    <string name="linked_cards_will_show_here">Your linked cards will show up here</string>
+    <string name="no_cards_found">You haven\'t linked any cards</string>
+    <string name="fetching_mini_statement">Fetching Ministatement</string>
+    <string name="no_ministatement_record_s_found">No ministatement record(s) found</string>
+    <string name="no_gallery_photos_found">No gallery photo(s) found</string>
+    <string name="no_foundations">No foundation found</string>
+    <string name="could_not_get_team">We could not retrieve the team right now \nPlease try again later</string>
+    <string name="original_price">Original Price:UGX   </string>
+    <string name="discounted_value">Discounted value: UGX   </string>
+    <string name="number_of_items">Number of items</string>
+    <string name="get_directions"><u>Get directions</u></string>
+    <string name="decrease">-</string>
+    <string name="increase">+</string>
+    <string name="zero">0</string>
+    <string name="scan_qr_code_at_the_entrance">Scan this QR code at the gate entrance</string>
+    <string name="swipe_to_view_more">(Swipe to view more tickets)</string>
+    <string name="ticket_type">Ticket Type</string>
+    <string name="total_price">Total Price</string>
+    <string name="total_price_tickets">Total</string>
+    <string name="quantity">QTY:</string>
+    <string name="total_ksh">TOTAL KSH:</string>
+    <string name="review_tickets">Review Tickets</string>
+    <string name="foundation">Foundation</string>
+    <string name="brief">Brief</string>
+    <string name="total_contributions">Total Contributions</string>
+    <string name="details">Details</string>
+    <string name="initiative">Initiative</string>
+    <string name="brief_of_incident">Brief of Incident</string>
+    <string name="amount_remaining">Amount Remaining</string>
+    <string name="highest_contributions">Highest Contributions</string>
+    <string name="view_all">View All</string>
+    <string name="no_contributions_found">No contributions found</string>
+    <string name="no_of_contributions">Amount contributed so far</string>
+    <string name="donate_as_anonymous">Donate as anonymous</string>
+    <string name="contribute">Contribute</string>
+    <string name="tickets">Tickets</string>
+    <string name="amount_UGX">Amount (UGX)</string>
+    <string name="just_amount">Amount</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="request_info">Request Info</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="purchased_ticket">Purchased Ticket</string>
+    <string name="fetching_list">Fetching list of highest contributors</string>
+    <string name="one">1</string>
+    <string name="price_to_buy">Price to buy</string>
+    <string name="search_for">Search for ...</string>
+    <string name="bio">bio</string>
+    <string name="comments">Comments</string>
+    <string name="be_the_first_to_comment">Be the first to comment</string>
+    <string name="add_a_comment">Add a comment</string>
+    <string name="top_up">Top Up</string>
+    <string name="view">View</string>
+    <string name="payment_options">Choose payment options</string>
+    <string name="withdraw_money">Withdraw</string>
+    <string name="session_expired">Session expired,please login</string>
+    <string name="ttype">Transaction type</string>
+    <string name="wallet_to_other_wallet">Wallet to other wallet</string>
+    <string name="card_to_wallet">Card to wallet</string>
+    <string name="card_to_mobile">Card to mobile</string>
+    <string name="bill_presentment">Bills presentment</string>
+    <string name="meter_number">Meter number</string>
+    <string name="account_no">Account number</string>
+    <string name="withdraw_card_to_phone">Card to mobile money</string>
+    <string name="wallet_withdraw_to_mobile">Wallet to mobile money</string>
+    <string name="biller_name">Biller Account</string>
+    <string name="merchant_name">Merchant name</string>
+    <string name="merchant_branch">Merchant branch</string>
+    <string name="mobile_to_wallet">Mobile to other wallet</string>
+    <string name="complete_transaction">Complete transaction</string>
+    <string name="discounted_amount">Discount amount: KSh </string>
+    <string name="deal_name">Deal name</string>
+    <string name="transfer_to">Enter mobile number to transfer money to</string>
+    <string name="root">This app cannot run on rooted device</string>
+    <string name="emulator_error">This app cannot run on simulation</string>
+    <string name="commitment_fee">Commitment Fee</string>
+    <string name="total_amount">Total amount</string>
+    <string name="faq">frequently asked questions</string>
+    <string name="enter_card_details">Please enter card details</string>
+    <string name="show_bal">Show balance</string>
+    <string name="hide_bal">Hide balance</string>
+    <string name="_0_kes">0.0</string>
+    <string name="kes">UGX</string>
+    <string name="date_error">End date should be greater than start date</string>
+    <string name="advert">Advertisement</string>
+    <string name="no_of_hrs">Number of hours</string>
+    <string name="select_payment_mode">Pay via</string>
+    <string name="please_choose_option">Please choose page option</string>
+    <string name="android">android</string>
+    <string name="user_agent_version">352412093854447</string>
+    <string name="geo_location">Home</string>
+    <string name="no_events">Sorry we could not find any event at the moment.</string>
+    <string name="no_adverts">No adverts found at the moment</string>
+    <string name="viedeo_comment">Leave your comment ..........</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="general_news">General news</string>
+    <string name="pandemic_news">Pandemic News</string>
+    <string name="no_deals">No deals found</string>
+    <string name="no_travel">No travel deals found</string>
+    <string name="no_food">No food deals found</string>
+    <string name="view_all_comments">View all comments</string>
+    <string name="no_comments">Be the first to leave  a comment</string>
+    <string name="load_all_comments">Load all comments</string>
+    <string name="cannot_rate_video">error rating video</string>
+    <string name="no_items_found">No item found</string>
+    <string name="logo">Churchill logo</string>
+    <string name="some_error_occurred_while_loading_videos_try_again">Some error occurred while loading videos, try again</string>
+    <string name="choose_payment">Choose payment method</string>
+    <string name="servers_down">Oops…   error occurred, \n kindly try again later</string>
+    <string name="no_tickets">No tickets found</string>
+
+    <string name="title_activity_events_location_map">Map</string>
+
+    <string name="title_activity_maps">Map</string>
+    <string name="churchill_number">254726109109</string>
+    <string name="churchillAddress">9935 – 00100 Nairobi, Kenya</string>
+    <string name="my_wallet_services">SERVICES</string>
+    <string name="txt_continue">Continue</string>
+
+
+    <string name="category_name">Category name</string>
+    <string name="upload_photo">Upload photo</string>
+    <string name="product">Product</string>
+    <string name="units">Units</string>
+    <string name="product_price">Product price @ Ksh</string>
+    <string name="order_list">Order List</string>
+    <string name="image">image</string>
+    <string name="delete">Delete</string>
+    <string name="continueStr">Continue</string>
+    <string name="business_name">Business Name</string>
+    <string name="by_signing_in_you_agree_the">By signing in you agree the </string>
+    <string name="check_internet">Something went wrong.Please check your Internet</string>
+    <string name="loading">loading</string>
+    <string name="create_password">Create Password</string>
+    <string name="password_dont_match">Password don\'t match.Try again</string>
+    <string name="resending">Resending..</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="sms_verification">Sms Verification</string>
+    <string name="contact_person">Contact person</string>
+    <string name="id_passport_no_pin">Id/Passport no/PIN</string>
+    <string name="total_cash">Total Cash</string>
+    <string name="edit">Edit</string>
+    <string name="confirm">Confirm</string>
+    <string name="can_create">Can Create</string>
+    <string name="can_view">Can View</string>
+    <string name="can_delete">Can Delete</string>
+    <string name="choose_page"><u>Choose Page</u></string>
+
+    <!-- pin pad numbers-->
+    <string name="number_zero">0</string>
+    <string name="number_one">1</string>
+    <string name="number_two">2</string>
+    <string name="number_three">3</string>
+    <string name="number_four">4</string>
+    <string name="number_five">5</string>
+    <string name="number_six">6</string>
+    <string name="number_seven">7</string>
+    <string name="number_eight">8</string>
+    <string name="number_nine">9</string>
+
+
+    <string name="my_account_wallet">My Account</string>
+    <string name="fund_transfer_wallet">Fund Transfer</string>
+    <string name="buy_airtime_wallet">Buy Airtime</string>
+    <string name="like_to_buy_airtime_for">Who would you like to buy airtime for?</string>
+    <string name="pesa_link">Pesa Link</string>
+    <string name="make_pesa_link_transfers_and_register">Make pesa link transfers and register</string>
+    <string name="mobile_money">Mobile Money</string>
+    <string name="send_money_to_mobile_money_etc">Send money to mobile money etc</string>
+    <string name="toolbar">ToolBar</string>
+    <string name="request_funds">Request Funds</string>
+
+
+    <string name="meterNumber">Please provide us with your meter number</string>
+    <string name="btn_continue_text">CONTINUE</string>
+    <string name="meter_number_hint">Eg.12345678</string>
+    <string name="meter_number_title_hint">Meter Number</string>
+    <string name="account_name_hint">Account Name</string>
+    <string name="person_name_hint">Alex Doe</string>
+    <string name="enter_amount_hint_top">Enter Amount</string>
+    <string name="price_hint">Eg. Kes 1,000</string>
+    <string name="pay_from_text">Pay from</string>
+    <string name="select_account_top_hint">Select Account</string>
+    <string name="current_account_hint">Current Account- A/C #1234******6789</string>
+    <string name="schedule_this_bill">Schedule this bill</string>
+    <string name="select_frequency_top_hint">Select Frequency</string>
+    <string name="eg_monthly_hint">Eg. Monthly</string>
+    <string name="next_date_top_hint">Next Date</string>
+    <string name="eg_01_01_1988_hint">Eg. 01/01/1988</string>
+    <string name="account_number_wallet">Please provide us with your account number</string>
+    <string name="account_number_top_hint">Account Number</string>
+    <string name="zuku_internet_title">Zuku Internet</string>
+    <string name="buy_airtime_title">Buy Airtime</string>
+    <string name="kplc_prepaid_title">Kplc Pre-paid</string>
+    <string name="airtime_title">How much airtime would yoy like to buy</string>
+    <string name="buy_from_text">Buy from</string>
+    <string name="amount_top_hint">Amount</string>
+    <string name="enter_amount_hint_edit_text">Enter Amount</string>
+    <string name="select_service_provider_top_hint">Select Service Provider</string>
+    <string name="phone_number_top_hint">Phone Number</string>
+    <string name="phone_hint">Eg. +254712345678</string>
+    <string name="send_to_phone">Send to Phone</string>
+    <string name="send_to_account">Send to account</string>
+    <string name="send_to_card">Send to card</string>
+    <string name="pesalink_settings">Pesalink settings</string>
+    <string name="bank_transfers">Bank Transfers</string>
+    <string name="send_to_mpesa">Send to Mpesa</string>
+    <string name="send_to_airtel_money">Send to Airtel Money</string>
+    <string name="send_to_t_kash">Send to T-Kash</string>
+    <string name="own_transfer">Own Transfer</string>
+    <string name="internal_transfer">Internal Transfer</string>
+    <string name="rtgs">RTGS</string>
+    <string name="eft">EFT</string>
+    <string name="near_field_communication_nfc">Near Field Communication (NFC)</string>
+    <string name="here_are_all_your_accounts">Here are all your accounts</string>
+    <string name="premier_current_account_4001234567890">Premier current account - 4001234567890</string>
+    <string name="available_balance">Available Balance</string>
+    <string name="kes_22_000_00">22,000.00</string>
+
+
+    <string name="unlock_withdraw">Unlock &amp; Withdraw</string>
+    <string name="make_deposit">Make Deposit</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="card_less_withdrawal">Card-less Withdrawal</string>
+
+    <string name="deposit_amount_top_hint">Deposit Amount</string>
+    <string name="deposit_from_tv_title">Deposit from</string>
+    <string name="make_deposit_title">We are proud of you, fill in the details to deposit more to your savings</string>
+    <string name="unlock_withdraw_tv_title">We hope it’s not an emergency, fill in the details to unlock your savings</string>
+    <string name="withdrawal_amount_top_hint">Withdrawal Amount</string>
+    <string name="withdrawal_to_tv_title">Withdrawal to</string>
+    <string name="withdraw_tv_title">We hope it’s not an emergency, fill in the details to withdraw your target savings</string>
+    <string name="withdraw_amount_hint">Withdraw Amount</string>
+    <string name="deposit_to_wallet">Deposit to</string>
+    <string name="how_much_withraw_title">How much would you like to withdraw?</string>
+    <string name="withdraw_to">Withdraw to</string>
+    <string name="mpesa">Mpesa</string>
+    <string name="withdraw_from">Withdraw from</string>
+    <string name="agent_number_top_hint">Agent Number</string>
+    <string name="eg_123456">Eg. 123456</string>
+    <string name="enter_amount_hint">Enter Amount</string>
+    <string name="phone_number_hint">Eg. 0712345678</string>
+    <string name="safaricom_hint">Safaricom</string>
+    <string name="make_withdrawals_from_your_nearest_agent">Make withdrawals from your nearest agent</string>
+    <string name="withdraw_card_less_with_atm">Withdraw card-less with ATM</string>
+    <string name="frequent_bills">Frequent bills</string>
+    <string name="all_bills">All bills</string>
+    <string name="zuku_internet_wallet">Zuku Internet</string>
+    <string name="kplc_prepaid_title_wallet">Kplc Pre-paid</string>
+    <string name="mpesa_to_account">Mpesa to Account</string>
+    <string name="cheque_deposit">Cheque Deposit</string>
+    <string name="deposit_from_mpesa_account">Deposit from Mpesa account</string>
+    <string name="make_a_cheque_deposit">Make a cheque deposit</string>
+    <string name="deposit_cheque_wallet">Deposit Cheque</string>
+    <string name="history_wallet">History</string>
+    <string name="all_bills_wallet">All Bill</string>
+    <string name="upcoming_bills_wallet">Upcoming Bills</string>
+    <string name="cheque_amount_wallet">Cheque Amount</string>
+    <string name="reference_wallet">Reference</string>
+    <string name="capture_photos_of_your_cheque_wallet">Capture photos of your cheque</string>
+    <string name="front_side_of_cheque_wallet">Front side of cheque</string>
+    <string name="back_side_of_cheque_wallet">Back side of cheque</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="remove_photo">Remove</string>
+    <string name="how_much_would_you_like_to_deposit">How much would you like to deposit?</string>
+    <string name="phone_number_wallet">Phone Number</string>
+    <string name="eg_254712345678_wallet">Eg. +254712345678</string>
+    <string name="my_bank_wallet">My Bank</string>
+    <string name="other_bank_wallet">Other Bank</string>
+    <string name="current_account_a_c_1234_6789">Current Account- A/C #1234******6789</string>
+    <string name="add_bank_account_wallet">ADD BANK ACCOUNT</string>
+    <string name="add_account_wallet">Add Account</string>
+    <string name="kes_xxxxxxx">KES XXXXXXX</string>
+    <string name="eclectics_premier_current_account">Eclectics Premier current account</string>
+    <string name="account_branch">Account branch</string>
+    <string name="transactional_wallet">Transactional</string>
+    <string name="_40012_67890">40012********67890</string>
+    <string name="premier_current_account_wallet">Premier Current Account</string>
+    <string name="eclectics_premier_current_account_xxxxxxxx678">Eclectics Premier current account - xxxxxxxx678</string>
+    <string name="recent_transactions_wallet">Recent Transactions</string>
+    <string name="here_are_all_your_full_statements_you_have_requested">Here are all your Eclectics Premier current account statements you have requested</string>
+    <string name="check_request_wallet">Cheque Request</string>
+    <string name="request_new_or_stop_a_cheque_book">Request new or stop a cheque book</string>
+    <string name="new_cheque">New Cheque</string>
+    <string name="stop_cheque">Stop Cheque</string>
+    <string name="cheque_book_size_wallet">Cheque Book Size</string>
+    <string name="select_size_wallet">Select Size</string>
+    <string name="last_series_wallet">Last Series</string>
+    <string name="cheque_number_wallet">Cheque Number</string>
+    <string name="from_number_wallet">From Number</string>
+    <string name="to_number">To Number</string>
+    <string name="_12">Eg. 12</string>
+    <string name="who_would_you_like_to_buy_airtime_for">Who would you like to buy airtime for?</string>
+    <string name="see_all_wallet">See All</string>
+    <string name="add_beneficiary_wallet">Add Beneficiary</string>
+    <string name="myself_wallet">Myself</string>
+    <string name="frequents_wallet">Frequents</string>
+    <string name="_25412345678">+25412345678</string>
+    <string name="all_contacts_wallet">All Contacts</string>
+
+
+    <string name="please_provide_us_with_your_meter_number_wallet">Please provide us with your meter number</string>
+    <string name="continue_wallet">CONTINUE</string>
+    <string name="eg_12345678">Eg.12345678</string>
+    <string name="meter_number_wallet">Meter Number</string>
+    <string name="account_name_wallet">Account Name</string>
+    <string name="alex_mwangi_wallet">Alex Mwangi</string>
+    <string name="enter_amount_wallet">Enter Amount</string>
+    <string name="eg_kes_1000_wallet">Eg. Kes 1,000</string>
+    <string name="unlock_withdraw_wallet">Unlock &amp; Withdraw</string>
+    <string name="make_deposit_wallet">Make Deposit</string>
+    <string name="funds_transfer_wallet">Funds Transfer</string>
+    <string name="card_less_withdrawal_wallet">Card-less Withdrawal</string>
+    <string name="withdraw_from_agent_wallet">Withdraw From Agent</string>
+    <string name="pay_from_wallet">Pay from</string>
+    <string name="current_account_wallet">Current Account- A/C #1234******6789</string>
+    <string name="schedule_this_bill_wallet">Schedule this bill</string>
+    <string name="select_frequency_wallet">Select Frequency</string>
+    <string name="eg_monthly_wallet">Eg. Monthly</string>
+    <string name="next_date_wallet">Next Date</string>
+    <string name="eg_01_01_1988_wallet">Eg. 01/01/1988</string>
+    <string name="please_provide_us_with_your_account_number_wallet">Please provide us with your account number</string>
+    <string name="kplc_prepaid_wallet">Kplc Pre-paid</string>
+    <string name="how_much_airtime_would_you_like_to_buy_wallet">How much airtime would you like to buy</string>
+    <string name="buy_from_wallet">Buy from</string>
+    <string name="amount_wallet">Amount</string>
+    <string name="select_service_provider_wallet">Select Service Provider</string>
+    <string name="deposit_amount_wallet">Deposit Amount</string>
+    <string name="deposit_from_wallet">Deposit from</string>
+    <string name="we_are_proud_of_you_wallet">We are proud of you, fill in the details to deposit more to your savings</string>
+    <string name="we_hope_it_is_not_an_emergency_wallet">We hope it’s not an emergency, fill in the details to unlock your savings</string>
+    <string name="withdrawal_amount_wallet">Withdrawal Amount</string>
+    <string name="withdrawal_to_wallet">Withdrawal to</string>
+    <string name="target_savings_wallet">We hope it’s not an emergency, fill in the details to withdraw your target savings</string>
+    <string name="withdraw_amount_wallet">Withdraw Amount</string>
+    <string name="how_much_would_you_like_to_withdraw_wallet">How much would you like to withdraw?</string>
+    <string name="withdraw_to_wallet">Withdraw to</string>
+    <string name="mpesa_wallet">Mpesa</string>
+    <string name="withdraw_from_wallet">Withdraw from</string>
+    <string name="agent_number_wallet">Agent Number</string>
+    <string name="eg_123456_wallet">Eg. 123456</string>
+    <string name="eg_0712345678_wallet">Eg. 0712345678</string>
+    <string name="my_number_0712345678_wallet">0712345678</string>
+    <string name="safaricom_wallet">Safaricom</string>
+    <string name="pesa_link_wallet">Pesa link</string>
+    <string name="pesa_link_to_phone_wallet">Pesalink to Phone</string>
+    <string name="pesa_link_to_account_wallet">Pesalink to Account</string>
+    <string name="send_to_phone_wallet">Send to Phone</string>
+    <string name="send_to_account_wallet">Send to account</string>
+    <string name="pesalink_send_to_card_wallet">Send to card</string>
+    <string name="pesalink_settings_wallet">Pesalink settings</string>
+    <string name="mobile_money_wallet">Mobile Money</string>
+    <string name="send_money_to_mpesa_wallet">Send Money to Mpesa</string>
+    <string name="send_to_mpesa_wallet">Send to Mpesa</string>
+    <string name="send_to_airtel_money_wallet">Send to Airtel Money</string>
+    <string name="send_to_t_kash_wallet">Send to T-Kash</string>
+    <string name="send_money_to_mobile_money_etc_wallet">Send money to mobile money etc</string>
+    <string name="make_pesa_link_transfers_and_register_wallet">Make pesa link transfers and register</string>
+    <string name="bank_transfers_wallet">Bank Transfers</string>
+    <string name="make_bank_to_bank_transfers_wallet">Make bank to bank transfers</string>
+    <string name="own_transfer_wallet">Own Transfer</string>
+    <string name="internal_transfer_wallet">Internal Transfer</string>
+    <string name="rtgs_wallet">RTGS</string>
+    <string name="eft_wallet">EFT</string>
+    <string name="request_funds_wallet">Request Funds</string>
+    <string name="request_for_money_wallet">Request for money</string>
+    <string name="mpesa_to_account_wallet">Mpesa to Account</string>
+    <string name="near_field_communication_nfc_wallet">Near Field Communication (NFC)</string>
+    <string name="how_much_would_you_like_to_transfer_wallet">How much would you like to transfer?</string>
+    <string name="select_bank_wallet">Select Bank</string>
+    <string name="mobile_number_wallet">Mobile Number</string>
+    <string name="transfer_from_wallet">Transfer from</string>
+    <string name="recipient_name_wallet">Recipient Name</string>
+    <string name="john_doe_wallet">John Eclectics Doe</string>
+    <string name="recipient_details_wallet">Recipient Details</string>
+    <string name="recipient_account_number_wallet">Recipient Account Number</string>
+    <string name="how_much_would_you_like_to_request_wallet">How much would you like to request?</string>
+    <string name="select_branch_wallet">Select Branch</string>
+    <string name="schedule_your_recent_bills_here_wallet">Schedule your recent bills here</string>
+    <string name="how_much_would_you_like_to_withdraw">How much would you like to withdraw?</string>
+    <string name="how_much_would_you_like_to_send">How much would you like to send?</string>
+    <string name="how_much_would_you_like_to_send_to_each_person">How much would you like to send to each person?</string>
+    <string name="add_plus_icon_beneficiary_wallet">
+   +
+    </string>
+    <string name="sub_title_buy_airtime_confirm_dialog">Please confirm you are buying airtime for %1$s </string>
+    <string name="Please_confirm_you_are_making_an_Send_to_Mpesa_to">Please confirm you are making an Send to Mpesa to %1$s </string>
+    <string name="title_buy_airtime_confirm_dialog">Confirm Buy Airtime</string>
+
+    <string name="sending_request_wallet">Please wait …</string>
+    <string name="who_would_you_like_to_send_money_to">Who would you like to send money to?</string>
+    <string name="select_wallet">Select</string>
+    <string name="more_cheque_wallet">More Cheque</string>
+    <string name="Confirm_New_Cheque_Request_wallet">Confirm New Cheque Request</string>
+    <string name="Please_confirm_you_want_to_make_a_request_for_Cheque_book_wallet">Please confirm you want to make a request for Cheque book</string>
+    <string name="note_you_will_incur_charges_for_statements_that_are_not_indicated_as_free"><font color="#083273">Note:</font><font color="#000000">You will incur charges for statements that are not indicated as free</font></string>
+    <string name="generate_new_statement_wallet">GENERATE NEW STATEMENT</string>
+    <string name="search_for_older_statements">SEARCH FOR OLDER STATEMENTS</string>
+    <string name="make_a_cheque_deposit_wallet">Make a cheque deposit</string>
+    <string name="open_full_statemnet_wallet">Open</string>
+    <string name="_10000">10000</string>
+    <string name="Confirm_Send_to_Mpesa">Confirm Send to Mpesa</string>
+    <string name="Confirm_Pesalink_to_Phone">Confirm Pesalink to Phone</string>
+    <string name="Please_confirm_you_are_making_an_Pesalink_to_Phone_254712345678">Please confirm you are making an Pesalink to Phone +254712345678</string>
+    <string name="Confirm_EFT_Transaction">Confirm EFT Transaction</string>
+    <string name="PleaseconfirmyouaremakinganEFTTransactiontoEquityBank">Please confirm you are making an EFT Transaction to Equity Bank</string>
+    <string name="cardContent_wallet">Current Account- A/C #1234******6789</string>
+    <string name="PleaseconfirmyouarewithdrawingfromEclecticsAgent">Please confirm you are withdrawing from Eclectics Agent</string>
+    <string name="ConfirmWithdrawfromAgent">Confirm Withdraw from Agent</string>
+    <string name="ConfirmCardLessWithdrawal">Confirm Card-less Withdrawal</string>
+    <string name="Pleaseconfirmyouaremakingacardlesswithdrawal">Please confirm you are making a card-less withdrawal</string>
+    <string name="Confirm_Cheque_Deposit">Confirm Cheque Deposit</string>
+    <string name="Make_sure_the_details_on_your_cheque_are_accurate_And_valid">Make sure the details on your cheque are accurate And valid</string>
+    <string name="Confirm_Mpesa_to_Account_deposit">Confirm Mpesa to Account deposit</string>
+    <string name="Please_confirm_you_are_making_an_Mpesa_to_Account_deposit">Please confirm you are making an Mpesa to Account deposit</string>
+    <string name="Your_transaction_was_successful_and_is_being_processed_now">Your transaction was successful and is being processed now</string>
+    <string name="Confirm_Kplc_Pre_paid_Bill_Payment">Confirm Kplc Pre-paid Bill Payment</string>
+    <string name="Please_confirm_you_are_paying_for_Kplc_pre_paid_from">"Please confirm you are paying for Kplc pre-paid from %1$s"</string>
+    <string name="Please_confirm_you_are_paying_for">"Please confirm you are paying for %1$s from %2$s"</string>
+    <string name="confirm_wallet">Confirm %1$s</string>
+    <string name="your_request_was_successful_wallet">Your request was successful and is being processed now</string>
+    <string name="send_to_many_wallet">Send to many</string>
+    <string name="you_can_send_money_to_more_that_one_person">You can send money to more that one person</string>
+    <string name="unlink_account_wallet">Unlink Account!</string>
+    <string name="would_you_like_to_unlink_your_account_from_mobile_banking">Would you like to unlink your account from Mobile banking?</string>
+    <string name="select_a_method_of_payment">Select a Method of Payment</string>
+    <string name="done_wallet">Done</string>
+    <string name="scan_nfc_card_wallet">Scan NFC Card</string>
+    <string name="nfc_funds_request_wallet">NFC funds request</string>
+    <string name="AMOUNT">AMOUNT</string>
+    <string name="SELECT_SERVICE_PROVIDER">SELECT_SERVICE_PROVIDER</string>
+    <string name="PHONE_NUMBER">PHONE_NUMBER</string>
+    <string name="SELECT_ACCOUNT">SELECT_ACCOUNT</string>
+    <string name="CHARGES">CHARGES</string>
+    <string name="BUY_FROM">BUY_FROM</string>
+    <string name="recipient_card_number_wallet">Recipient Card Number</string>
+    <string name="wallet_wallet">Wallet</string>
+    <string name="deregister_account_wallet">Deregister account</string>
+    <string name="remove_account_from_pesalink_wallet">Remove account from pesalink</string>
+    <string name="unlink_phone_wallet">Unlink Phone</string>
+    <string name="remove_phone_from_pesalink_wallet">Remove phone from pesalink</string>
+    <string name="Would_you_like_to_deregister_your_account_from_Pesalink_wallet">Would you like to deregister your account from Pesalink?</string>
+    <string name="same_amount_wallet">Same Amount</string>
+    <string name="sending_to_wallet">Sending to</string>
+</resources>

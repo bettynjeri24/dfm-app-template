@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_getstarted">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ekenya.rnd.personalfinance.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home_personal_finance" >
+        <action
+            android:id="@+id/action_navigation_home_to_createBudgetFragment"
+            app:destination="@id/createBudgetFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_manageBudgetFragment"
+            app:destination="@id/manageBudgetFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_expensesFragment"
+            app:destination="@id/expensesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_getstarted"
+        android:name="com.ekenya.rnd.personalfinance.ui.getstarted.GetStartedFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_getstarted_personal_finance" >
+        <action
+            android:id="@+id/action_navigation_getstarted_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/createBudgetFragment"
+        android:name="com.ekenya.rnd.personalfinance.ui.budgets.CreateBudgetFragment"
+        android:label="fragment_create_budget_pf"
+        tools:layout="@layout/fragment_create_budget_pf" />
+    <fragment
+        android:id="@+id/manageBudgetFragment"
+        android:name="com.ekenya.rnd.personalfinance.ui.budgets.managebudget.ManageBudgetFragment"
+        android:label="fragment_manage_budget_pf"
+        tools:layout="@layout/fragment_manage_budget_pf" />
+    <fragment
+        android:id="@+id/expensesFragment"
+        android:name="com.ekenya.rnd.personalfinance.ui.budgets.expenses.ExpensesFragment"
+        android:label="fragment_expenses_pf"
+        tools:layout="@layout/fragment_expenses_pf" >
+        <action
+            android:id="@+id/action_expensesFragment_to_moreAboutExpensesFragment"
+            app:destination="@id/moreAboutExpensesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreAboutExpensesFragment"
+        android:name="com.ekenya.rnd.personalfinance.ui.budgets.expenses.MoreAboutExpensesFragment"
+        android:label="fragment_more_about_expenses_pf"
+        tools:layout="@layout/fragment_more_about_expenses_pf" />
+
+
+</navigation>

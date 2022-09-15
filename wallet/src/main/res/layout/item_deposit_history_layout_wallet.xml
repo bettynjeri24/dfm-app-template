@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mcVRoout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:backgroundTint="@color/grey_tint_wallet"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/card_view_padding_16dp"
+        android:paddingBottom="@dimen/card_view_padding_16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cVDepositHistory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="@dimen/_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/iVDepositHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_succesful_deposit_wallet" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tVTitleDepositHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:fontFamily="@font/nunitosans_bold_wallet"
+            android:textColor="@color/red_text_color_wallet"
+            android:textSize="@dimen/_16sp_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cVDepositHistory"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteY="32dp"
+            tools:text="Fund Transfer" />
+
+        <TextView
+            android:id="@+id/tVDescDepositHistory"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tVTitleDepositHistory"
+            app:layout_constraintTop_toBottomOf="@+id/tVTitleDepositHistory"
+            tools:text="@string/kes_0_0_0" />
+
+        <TextView
+            android:id="@+id/tVDepositHistoryDateTime"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_marginBottom="13dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tVTitleDepositHistory"
+            app:layout_constraintTop_toBottomOf="@+id/tVDescDepositHistory"
+            tools:text="@string/kes_0_0_0" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iVDepositHistorysArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:layout_marginBottom="@dimen/_4dp"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingTop="@dimen/_16dp"
+            android:paddingEnd="@dimen/_16dp"
+            android:paddingBottom="@dimen/_16dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_arrow_open_wallet"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.withdraw.StartWithdrawMoneyFragmentWallet">
+
+    <include
+        android:id="@+id/clToolBar"
+        layout="@layout/custom_toolbar_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvWithdrawFromAgent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/lightest_grey_wallet"
+        app:cardElevation="@dimen/_0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clWithdrawFromAgent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cVIVWithdrawFromAgent"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:cardCornerRadius="@dimen/_50dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/iVWithdrawFromAgent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_withdraw_from_agent_wallet" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tVTitleWithdrawFromAgent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/nunitosans_bold_wallet"
+                    android:singleLine="true"
+                    android:text="@string/withdraw_from_agent"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/iVWithdrawFromAgentArrow"
+                    app:layout_constraintStart_toEndOf="@+id/cVIVWithdrawFromAgent"
+                    app:layout_constraintTop_toTopOf="@+id/cVIVWithdrawFromAgent" />
+
+                <TextView
+                    android:id="@+id/tVWithdrawFromAgentDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:text="@string/make_withdrawals_from_your_nearest_agent"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sp_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tVTitleWithdrawFromAgent"
+                    app:layout_constraintStart_toStartOf="@+id/tVTitleWithdrawFromAgent"
+                    app:layout_constraintTop_toBottomOf="@+id/tVTitleWithdrawFromAgent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVWithdrawFromAgentArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:layout_marginEnd="@dimen/_4dp"
+                    android:layout_marginBottom="@dimen/_4dp"
+                    android:paddingStart="@dimen/_16dp"
+                    android:paddingTop="@dimen/_16dp"
+                    android:paddingEnd="@dimen/_8dp"
+                    android:paddingBottom="@dimen/_16dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_arrow_open_wallet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvCardlessWithdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/lightest_grey_wallet"
+        app:cardElevation="@dimen/_0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvWithdrawFromAgent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCardlessWithdrawal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cVIVCardlessWithdrawal"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:cardCornerRadius="@dimen/_50dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/iVCardlessWithdrawal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_card_less_withdrawal_wallet" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tVTitleCardlessWithdrawal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/nunitosans_bold_wallet"
+                    android:singleLine="true"
+                    android:text="@string/card_less_withdrawal"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/iVCardlessWithdrawalArrow"
+                    app:layout_constraintStart_toEndOf="@+id/cVIVCardlessWithdrawal"
+                    app:layout_constraintTop_toTopOf="@+id/cVIVCardlessWithdrawal" />
+
+                <TextView
+                    android:id="@+id/tVCardlessWithdrawalDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:text="@string/withdraw_card_less_with_atm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sp_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tVTitleCardlessWithdrawal"
+                    app:layout_constraintStart_toStartOf="@+id/tVTitleCardlessWithdrawal"
+                    app:layout_constraintTop_toBottomOf="@+id/tVTitleCardlessWithdrawal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVCardlessWithdrawalArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:layout_marginEnd="@dimen/_4dp"
+                    android:layout_marginBottom="@dimen/_4dp"
+                    android:paddingStart="@dimen/_16dp"
+                    android:paddingTop="@dimen/_16dp"
+                    android:paddingEnd="@dimen/_8dp"
+                    android:paddingBottom="@dimen/_16dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_arrow_open_wallet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

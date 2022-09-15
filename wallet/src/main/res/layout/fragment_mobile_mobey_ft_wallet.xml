@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fundtransfer.mobile_money.MobileMoneyFundTransferWalletFragment">
+
+    <include
+        android:id="@+id/clToolBar"
+        layout="@layout/custom_toolbar_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_how_much_would_you_like_to_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:fontFamily="@font/nunitosans_semibold_wallet"
+        android:text="@string/how_much_would_you_like_to_send"
+        android:textAlignment="textStart"
+        android:textColor="@color/dark_blue_wallet"
+        android:textSize="@dimen/_16sp_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputAmount"
+        style="@style/TextInputLayoutStyleWallet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/amount_wallet"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_how_much_would_you_like_to_send">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:hint="@string/enter_amount_wallet"
+            android:inputType="number"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    Recipient Details text view-->
+    <TextView
+        android:id="@+id/tVRecipientDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:fontFamily="@font/nunitosans_regular_wallet"
+        android:text="@string/recipient_details_wallet"
+        android:textColor="@color/dark_blue_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputAmount" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSelfOrOthers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tVRecipientDetails"
+        app:layout_constraintVertical_bias="0.24000001">
+
+        <!-- <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">-->
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioButtonSelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_48dp"
+            android:button="@drawable/radiodraw"
+            android:checked="true"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:gravity="center"
+            android:padding="@dimen/_8dp"
+            android:text="@string/myself_wallet"
+            android:textColor="@color/dark_blue_wallet"
+            android:textSize="@dimen/_14sp_text_size"
+            app:layout_constraintEnd_toStartOf="@id/radioButtonOtherBank"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioButtonOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiodraw"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:gravity="center"
+            android:padding="@dimen/_8dp"
+            android:text="@string/other_phone"
+            android:textColor="@color/dark_blue_wallet"
+            android:textSize="@dimen/_14sp_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/radioButtonMyBank"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clPhoneToMpesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupSelfOrOthers">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@id/tILayoutPhoneNumber"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_16_dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/phone_number_wallet"
+            android:textColorHint="#000000"
+            app:endIconDrawable="@drawable/ic_outline_contacts_24"
+            app:endIconMode="custom"
+            app:endIconTint="@color/dark_blue_wallet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/eg_123456"
+                android:inputType="number"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--    Recipient Details text view-->
+        <TextView
+            android:id="@+id/tVTransferFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:text="@string/transfer_from_wallet"
+            android:textColor="@color/dark_blue_wallet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tILayoutPhoneNumber" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tIlSelectAccount"
+            style="@style/exposedDropdownMenuCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/_32dp"
+            android:hint="@string/select_account_wallet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tVTransferFrom">
+
+            <AutoCompleteTextView
+                android:id="@+id/aCtSelectAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/select_size_wallet"
+                android:inputType="none"
+                android:minHeight="@dimen/_48dp"
+                android:textSize="@dimen/_14sp_text_size" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16_dp"
+        android:layout_marginTop="@dimen/margin_16_dp"
+        android:layout_marginEnd="@dimen/margin_16_dp"
+        android:layout_marginBottom="@dimen/margin_bottom"
+        android:background="@drawable/btn_rounded_corners_filled_wallet"
+        android:fontFamily="@font/nunitosans_extrabold_wallet"
+        android:text="@string/btn_continue_text"
+        android:textColor="@color/white"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

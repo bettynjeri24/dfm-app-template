@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mcVRoout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:backgroundTint="@color/grey_tint_wallet"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/card_view_padding_16dp"
+        android:paddingBottom="@dimen/card_view_padding_16dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cVFullStatementIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="@dimen/_0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/iVFullStatementIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tVTitleFullStatement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:textColor="@color/gray1_wallet"
+            android:textSize="@dimen/_14sp_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/cVFullStatementIcon"
+            app:layout_constraintEnd_toStartOf="@+id/clOpenOrDownLoad"
+            app:layout_constraintStart_toEndOf="@+id/cVFullStatementIcon"
+            app:layout_constraintTop_toTopOf="@+id/cVFullStatementIcon"
+            tools:text="Fund Transfer" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clOpenOrDownLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:layout_marginBottom="@dimen/_4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iVFullStatementDownload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:paddingStart="@dimen/_16dp"
+                android:paddingTop="@dimen/_16dp"
+                android:paddingEnd="@dimen/_16dp"
+                android:visibility="gone"
+                android:paddingBottom="@dimen/_16dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_download_fullstatement_wallet"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tvFullStatementDownloadedOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:paddingStart="@dimen/_16dp"
+                android:paddingTop="@dimen/_16dp"
+                android:text="@string/open_full_statemnet_wallet"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:textColor="@color/dark_blue_wallet"
+                android:textSize="@dimen/_14sp_text_size"
+                android:textStyle="bold"
+                android:paddingEnd="@dimen/_16dp"
+                android:paddingBottom="@dimen/_16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

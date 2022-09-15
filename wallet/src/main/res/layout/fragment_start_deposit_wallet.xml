@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.deposit.StartDepositWalletFragment">
+
+    <include
+        android:id="@+id/clToolBar"
+        layout="@layout/custom_toolbar_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvMpesaToAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/lightest_grey_wallet"
+        app:cardElevation="@dimen/_0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/card_view_padding_16dp"
+            android:paddingBottom="@dimen/card_view_padding_16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clMpesaToAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cVIVMpesaToAccount"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:cardCornerRadius="@dimen/_50dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/iVMpesaToAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mpesa_to_account_wallet" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tVTitleMpesaToAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/nunitosans_bold_wallet"
+                    android:singleLine="true"
+                    android:text="@string/mpesa_to_account"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/iVArrowMpesaToAccount"
+                    app:layout_constraintStart_toEndOf="@+id/cVIVMpesaToAccount"
+                    app:layout_constraintTop_toTopOf="@+id/cVIVMpesaToAccount" />
+
+                <TextView
+                    android:id="@+id/tVDescMpesaToAccount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:text="@string/deposit_from_mpesa_account"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sp_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tVTitleMpesaToAccount"
+                    app:layout_constraintStart_toStartOf="@+id/tVTitleMpesaToAccount"
+                    app:layout_constraintTop_toBottomOf="@+id/tVTitleMpesaToAccount" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVArrowMpesaToAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:layout_marginEnd="@dimen/_4dp"
+                    android:layout_marginBottom="@dimen/_4dp"
+                    android:paddingStart="@dimen/_16dp"
+                    android:paddingTop="@dimen/_16dp"
+                    android:paddingEnd="@dimen/_8dp"
+                    android:paddingBottom="@dimen/_16dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_arrow_open_wallet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvChequeDeposit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/lightest_grey_wallet"
+        app:cardElevation="@dimen/_0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvMpesaToAccount">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/card_view_padding_16dp"
+            android:paddingBottom="@dimen/card_view_padding_16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clChequeDeposit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cVIVChequeDeposit"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:layout_marginBottom="@dimen/_8dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:cardCornerRadius="@dimen/_50dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/iVChequeDeposit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_cheque_deposit_wallet" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tVTitleChequeDeposit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/nunitosans_bold_wallet"
+                    android:singleLine="true"
+                    android:text="@string/cheque_deposit"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/iVArrowChequeDeposit"
+                    app:layout_constraintStart_toEndOf="@+id/cVIVChequeDeposit"
+                    app:layout_constraintTop_toTopOf="@+id/cVIVChequeDeposit" />
+
+                <TextView
+                    android:id="@+id/tVDescChequeDeposit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:text="@string/make_a_cheque_deposit"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sp_text_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/tVTitleChequeDeposit"
+                    app:layout_constraintStart_toStartOf="@+id/tVTitleChequeDeposit"
+                    app:layout_constraintTop_toBottomOf="@+id/tVTitleChequeDeposit" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iVArrowChequeDeposit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4dp"
+                    android:layout_marginEnd="@dimen/_4dp"
+                    android:layout_marginBottom="@dimen/_4dp"
+                    android:paddingStart="@dimen/_16dp"
+                    android:paddingTop="@dimen/_16dp"
+                    android:paddingEnd="@dimen/_8dp"
+                    android:paddingBottom="@dimen/_16dp"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_arrow_open_wallet"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

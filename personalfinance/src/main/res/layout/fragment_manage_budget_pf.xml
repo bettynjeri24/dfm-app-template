@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.budgets.managebudget.ManageBudgetFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4dp"
+        android:background="@color/pf_blue_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/pf_blue_color"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:titleTextColor="@color/pf_white"
+            tools:title="Manage Budget" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cLBudgetExists"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_budget_set_exists"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:fontFamily="@font/nunitosans_regular_pf"
+            android:padding="@dimen/_4dp"
+            android:text="@string/monthly_budget"
+            android:textAlignment="textStart"
+            android:textColor="@color/pf_dark_gray_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_budget_amount_exists"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:clickable="true"
+            android:drawableEnd="@drawable/ic_baseline_edit_pf"
+            android:drawablePadding="@dimen/_8dp"
+            android:focusable="true"
+            android:fontFamily="@font/nunitosans_bold_pf"
+            android:padding="@dimen/_4dp"
+            tools:text="@string/kes_25_000_00"
+            android:textColor="@color/pf_blue_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_budget_set_exists" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_remaining_balance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:fontFamily="@font/nunitosans_regular_pf"
+            android:padding="@dimen/_4dp"
+            android:text="@string/remaining_balance"
+            android:textColor="@color/pf_dark_gray_text_color"
+            app:layout_constraintEnd_toStartOf="@id/tv_remaining_balance_amount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_budget_amount_exists" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_remaining_balance_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/nunitosans_bold_pf"
+            android:padding="@dimen/_4dp"
+            android:text="@string/kes_25_000_00"
+            android:textColor="@color/pf_blue_color"
+            app:layout_constraintEnd_toStartOf="@id/tv_remaining_balance_percentage"
+            app:layout_constraintStart_toEndOf="@id/tv_remaining_balance"
+            app:layout_constraintTop_toBottomOf="@+id/tv_budget_amount_exists" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_remaining_balance_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:fontFamily="@font/nunitosans_semibold_pf"
+            android:padding="@dimen/_4dp"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_4dp"
+            android:text="-40%"
+            android:textColor="@color/pf_dark_gray_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_remaining_balance_amount"
+            app:layout_constraintTop_toBottomOf="@+id/tv_budget_amount_exists" />
+
+        <ProgressBar
+            android:id="@+id/pBBudget"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:max="100"
+            android:progress="35"
+            android:progressTint="@color/pf_green"
+            android:secondaryProgressTint="@color/pf_light_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_remaining_balance" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_spent_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/nunitosans_bold_pf"
+            android:padding="@dimen/_4dp"
+            android:text="@string/kes_25_000_00"
+            android:textColor="@color/pf_blue_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pBBudget" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSpend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:text="Spent Amount"
+            android:textColor="@color/pf_dark_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_spent_amount" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_8dp"
+            android:background="@drawable/duration_bg_pf"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSpend">
+
+            <TextView
+                android:id="@+id/btnWeekly"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:background="@drawable/btn_duration_selected_bg"
+                android:padding="10dp"
+                android:text="@string/weekly"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/pf_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnMonthly"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/btnMonthly"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginEnd="@dimen/_2dp"
+                android:layout_marginBottom="@dimen/_2dp"
+                android:background="@null"
+                android:padding="10dp"
+                android:text="@string/quarterly"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/pf_dark_gray_text_color"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnWeekly"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStatistics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:paddingTop="@dimen/_16dp"
+            android:paddingEnd="@dimen/_16dp"
+            android:paddingBottom="@dimen/_16dp"
+            android:text="@string/statistics"
+            android:textColor="@color/pf_dark_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clDuration" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tIlSelectMonth"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/month"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tvStatistics"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvStatistics">
+
+            <AutoCompleteTextView
+                android:id="@+id/aCtSelectMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:hint="Month"
+                android:inputType="none"
+                android:minHeight="@dimen/_48dp"
+                android:padding="@dimen/_16dp"
+                android:textSize="@dimen/_14_sp_text_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_your_recommended"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:fontFamily="@font/nunitosans_regular_pf"
+            android:padding="@dimen/_4dp"
+            android:paddingEnd="@dimen/_4dp"
+            android:text="@string/your_recommended_spending_limits"
+            android:textColor="@color/pf_dark_gray_text_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStatistics"
+            app:layout_goneMarginStart="@dimen/_16dp" />
+
+        <com.github.eclectics.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            app:layout_constraintBottom_toTopOf="@id/cl1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_your_recommended" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lineChart">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_current_daily_average_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_bold_pf"
+                android:padding="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="KES 1,520.00"
+                android:textAlignment="textStart"
+                android:textColor="@color/pf_red_text_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginStart="@dimen/_16dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_daily_recommended_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_bold_pf"
+                android:padding="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="KES 980.00"
+                android:textAlignment="textEnd"
+                android:textColor="@color/pf_green"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_current_daily_average_amount"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginStart="@dimen/_16dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_current_daily_average"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:maxLines="2"
+                android:padding="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@string/current_daily_average"
+                android:textAlignment="textStart"
+                android:textColor="@color/pf_dark_gray_text_color"
+                app:layout_constraintEnd_toStartOf="@id/daily_recommended"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_current_daily_average_amount"
+                app:layout_goneMarginStart="@dimen/_16dp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/daily_recommended"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/nunitosans_regular_pf"
+                android:maxLines="2"
+                android:padding="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:text="@string/daily_recommended"
+                android:textAlignment="textEnd"
+                android:textColor="@color/pf_dark_gray_text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_current_daily_average"
+                app:layout_constraintTop_toBottomOf="@id/tv_current_daily_average_amount"
+                app:layout_goneMarginStart="@dimen/_16dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.home.FragmentHomeMerchant"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_merchant" >
+        <action
+            android:id="@+id/action_home_to_directPayment"
+            app:destination="@id/directPaymentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_home_to_scanAndPay"
+            app:destination="@id/scanAndPayFragment" />
+        <action
+            android:id="@+id/action_home_to_hotdeals"
+            app:destination="@id/hotDealsFragment" />
+        <action
+            android:id="@+id/action_home_to_eventsAndTickets"
+            app:destination="@id/eventsAndTicketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/directPaymentFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.direct_payment.FragmentDirectPayment"
+        android:label="fragment_direct_payment_merchant"
+        tools:layout="@layout/fragment_direct_payment_merchant" >
+        <action
+            android:id="@+id/action_directPayment_to_splitBill"
+            app:destination="@id/splitBillFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_directPayment_to_successfulFragment"
+            app:destination="@id/authFragment" />
+        <action
+            android:id="@+id/action_directPayment_to_SelectContact"
+            app:destination="@id/fragmentSelectContact" />
+    </fragment>
+    <fragment
+        android:id="@+id/scanAndPayFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.FragmentScanAndPayMerchant"
+        android:label="fragment_scan_and_pay"
+        tools:layout="@layout/fragment_scan_and_pay_merchant" />
+    <fragment
+        android:id="@+id/splitBillFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.split_bill.FragmentSplitBill"
+        android:label="fragment_split_bill_merchant"
+        tools:layout="@layout/fragment_split_bill_merchant" >
+        <action
+            android:id="@+id/action_splitBill_to_SelectContact"
+            app:destination="@id/fragmentSelectContact"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_splitBill_to_directPayment"
+            app:destination="@id/directPaymentFragment"
+            app:popUpTo="@id/directPaymentFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splitBillFragment_to_successfulFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSelectContact"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.select_contact.FragmentSelectContact"
+        android:label="fragment_select_contact_merchant"
+        tools:layout="@layout/fragment_select_contact_merchant" >
+        <action
+            android:id="@+id/action_selectContact_to_splitBill"
+            app:destination="@id/splitBillFragment"
+            app:popUpTo="@id/splitBillFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="contacts"
+            app:argType="com.ekenya.rnd.merchant.domain.model.ContactModel[]"
+            app:nullable="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/successfulFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.successful_screen.SuccessfulFragmentMerchant"
+        android:label="fragment_sucessful"
+        tools:layout="@layout/fragment_sucessful_merchant">
+        <action
+            android:id="@+id/action_successful_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/directPaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.auth.AuthFragmentMerchant"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth_merchant">
+        <action
+            android:id="@+id/action_authFragment_to_successfulFragment"
+            app:destination="@id/successfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotDealsFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.hot_deals.HotDealsFragment"
+        android:label="HotDealsFragment" >
+        <action
+            android:id="@+id/action_hotDealsFragment_to_dealListFragment"
+            app:destination="@id/dealListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dealListFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.deals.deals_list.DealListFragment"
+        android:label="DealListFragment" />
+    <fragment
+        android:id="@+id/eventsAndTicketsFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.events_and_tickets.EventsAndTicketsFragment"
+        android:label="fragment_events_tickets_merchant"
+        tools:layout="@layout/fragment_events_tickets_merchant" >
+        <action
+            android:id="@+id/action_eventsAndTicketsFragment_to_selectedEventFragment"
+            app:destination="@id/selectedEventFragment" />
+        <action
+            android:id="@+id/action_eventsAndTicketsFragment_to_selectedTicketFragment"
+            app:destination="@id/selectedTicketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedTicketFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.selected_ticket.SelectedTicketFragment"
+        android:label="fragment_selected_ticket"
+        tools:layout="@layout/fragment_selected_ticket" />
+    <fragment
+        android:id="@+id/selectedEventFragment"
+        android:name="com.ekenya.rnd.merchant.ui.fragments.selected_event.SelectedEventFragment"
+        android:label="fragment_selected_event"
+        tools:layout="@layout/fragment_selected_event" />
+</navigation>

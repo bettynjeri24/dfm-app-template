@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="colorPrimary">#083273</color>
+    <color name="colorPrimaryVariant">#083273</color>
+    <color name="colorSecondary">#FF03DAC5</color>
+    <color name="colorSecondaryVariant">#FF018786</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="colorAccent">#083273</color>
+    <color name="black">#FF000000</color>
+
+    <color name="ColorPrimaryTint">#D922285D</color>
+
+    <color name="orangebackground">#ff6400</color>
+    <color name="light_orange">#ffffb180</color>
+    <color name="dark_orange">#9F4E00</color>
+
+
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="accent">#1AA7E1</color>
+
+
+    <color name="colorOnSecondary">@color/black</color>
+    <color name="lightest_grey_wallet">#F7F7F7</color>
+
+
+    <color name="error">#d41a0c</color>
+
+    <color name="grey_custom">#ECF1FF</color>
+    <color name="actionbar_opacity">#33000000</color>
+    <!--
+    <color name="maroon">#00395d</color>
+    <color name="orange">#00395d</color>
+
+
+
+    //Custom Colors
+    <color name="black">#000</color>
+    <color name="light_grey">#dddcdc</color>
+    <color name="grey">#F7F7F7</color>
+    <color name="hint_default_color">#808080</color>
+    <color name="red">@color/orange</color>
+    <color name="flaming_hot">@color/colorPrimary</color>
+    <color name="successful">#009144</color>
+    <color name="light_maroon">@color/orange</color>
+    <color name="maroon">@color/orange</color>
+    <color name="orange">@color/colorPrimary</color>
+   343e48 166724-->
+    <color name="translucent">#64ffffff</color>
+    <color name="transparent">#00f6711c</color>
+    <color name="yellow">#fef200</color>
+    <color name="green">#5d8c45</color>
+    <color name="slightly_transparent">#14ffffff</color>
+    <color name="white">#fff</color>
+    <color name="colorGreyLight">#FAF9FC</color>
+    <color name="fireBrickRed">#B22222</color>
+    <color name="azure">#0080FF</color>
+    <color name="navyBlue">#000080</color>
+    <color name="teaBlue">#008081</color>
+    <color name="turquoise">#3FE0D0</color>
+    <color name="airforce">#588BAE</color>
+    <color name="carolina">#57A0D3</color>
+    <color name="steel">#4682B4</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+
+
+    <!--
+    <color name="maroon">#00395d</color>
+    <color name="orange">#00395d</color>
+    -->
+    -->
+
+</resources>

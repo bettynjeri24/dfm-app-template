@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/_20dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_rounded_bottomsheet_top_wallet"
+    tools:context=".ui.airtime.SelectBuyAirTimeFromFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:background="@color/light_gray_wallet2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="@dimen/_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_max="@dimen/_40dp" />
+
+    <TextView
+        android:id="@+id/tV_select_a_method_of_payment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:fontFamily="@font/nunitosans_bold_wallet"
+        android:text="@string/select_a_method_of_payment"
+        android:textColor="@color/dark_blue_wallet"
+        android:textSize="@dimen/_14sp_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMobileMoneyBankAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tV_select_a_method_of_payment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_Mobile_Money_Buy_AirTime"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toStartOf="@id/cv_BankAccount_Buy_AirTime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cvMobileMoneyBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_tint_wallet"
+                android:paddingTop="@dimen/card_view_padding_16dp"
+                android:paddingBottom="@dimen/card_view_padding_16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cVImageMobileMoneyBuyAirTime"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/iVMobileMoneyBuyAirTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mobile_money_buy_airtime_wallet" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tVTitleMobileMoneyBuyAirTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/nunitosans_bold_wallet"
+                    android:text="@string/mobile_money_wallet"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/cVImageMobileMoneyBuyAirTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cVImageMobileMoneyBuyAirTime"
+                    app:layout_constraintTop_toTopOf="@+id/cVImageMobileMoneyBuyAirTime" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_BankAccount_Buy_AirTime"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cv_Mobile_Money_Buy_AirTime"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cvBankAccountBg"
+                android:layout_width="match_parent"
+                android:background="@color/grey_tint_wallet"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/card_view_padding_16dp"
+                android:paddingBottom="@dimen/card_view_padding_16dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cVIvBankAccountBuyAirTime"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/nunitosans_regular_wallet"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:textSize="16sp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="@dimen/_0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/iVBankAccountBuyAirTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_mobile_money_buy_airtime_wallet" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/tVTitleBankAccountBuyAirTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/nunitosans_bold_wallet"
+                    android:text="@string/bank_account"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sp_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/cVIvBankAccountBuyAirTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cVIvBankAccountBuyAirTime"
+                    app:layout_constraintTop_toTopOf="@+id/cVIvBankAccountBuyAirTime" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--Mobile Money-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMobileMoneyBuyAirTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clMobileMoneyBankAccount">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:layout_marginEnd="@dimen/_16dp"
+            app:cardCornerRadius="@dimen/_4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/gray_color_wallet"
+            app:strokeWidth="@dimen/_1dp">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerServiceProvider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPhone"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/phone_number_top_hint"
+            android:textColorHint="#000000"
+            app:endIconDrawable="@drawable/ic_contacts_book_waller"
+            app:endIconMode="custom"
+            app:endIconTint="@color/dark_blue_wallet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvSpinner">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/phone_hint"
+                android:inputType="number"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMobileMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_bottom"
+            android:layout_marginEnd="@dimen/margin_16_dp"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:background="@drawable/btn_rounded_corners_filled_wallet"
+            android:backgroundTint="@color/light_blue_wallet"
+            android:fontFamily="@font/nunitosans_extrabold_wallet"
+            android:text="@string/btn_continue_text"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputPhone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--Bank Account-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBankAccountBuyAirTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clMobileMoneyBankAccount">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputSelectAccount"
+            style="@style/exposedDropdownMenuCustom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:layout_marginEnd="@dimen/_16dp"
+            android:hint="@string/select_Account"
+            android:textColorHint="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/aCtSelectAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false"
+                android:fontFamily="@font/nunitosans_regular_wallet"
+                android:hint="@string/current_account_a_c_1234_6789"
+                android:inputType="none"
+                android:minHeight="@dimen/_48dp"
+                android:padding="15dp"
+                android:textSize="@dimen/_14sp_text_size" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBankAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16_dp"
+            android:layout_marginTop="@dimen/margin_bottom"
+            android:layout_marginEnd="@dimen/margin_16_dp"
+            android:layout_marginBottom="@dimen/margin_bottom"
+            android:background="@drawable/btn_rounded_corners_filled_wallet"
+            android:backgroundTint="@color/light_blue_wallet"
+            android:fontFamily="@font/nunitosans_extrabold_wallet"
+            android:text="@string/btn_continue_text"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputSelectAccount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

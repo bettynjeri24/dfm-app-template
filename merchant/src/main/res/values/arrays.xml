@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mobileMoneyProvider" >
+        <item>Orange Money</item>
+        <item>MyZaka</item>
+        <item>Smega BTC Money</item>
+        <item>Bank Transfer</item>
+        <item>Investment - Treasury Bills</item>
+
+    </string-array>
+
+    <string-array name="accountProvider" >
+        <item>Awesome Jim- A/C #1234 •••• •••• 2344 (personal)</item>
+        <item>Awesome Jim- A/C #1234 •••• •••• 2344 (personal)</item>
+        <item>Awesome Jim- A/C #1234 •••• •••• 2344 (joint)</item>
+        <item>Awesome Jim- A/C #1234 •••• •••• 2344(personal)</item>
+    </string-array>
+</resources>

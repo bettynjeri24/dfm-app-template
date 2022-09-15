@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fundtransfer.pesalink.toaccount.PesalinkToAccountFragmentWallet">
+
+    <!--    Tool bar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/dark_blue_wallet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            app:titleTextColor="@color/white_wallet"
+            tools:title="Pesalink to Account" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    Transfer Amount text View-->
+    <TextView
+        android:id="@+id/tVTransferAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:fontFamily="@font/nunitosans_semibold_wallet"
+        android:text="@string/how_much_would_you_like_to_transfer_wallet"
+        android:textColor="@color/dark_blue_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clToolBar" />
+
+
+    <!--    Amount-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputAmount"
+        style="@style/TextInputLayoutStyleWallet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:hint="@string/amount_wallet"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tVTransferAmount">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtAmount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:hint="@string/enter_amount_wallet"
+            android:inputType="number"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    Recipient Details text view-->
+    <TextView
+        android:id="@+id/tVRecipientDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:fontFamily="@font/nunitosans_regular_wallet"
+        android:text="@string/recipient_details_wallet"
+        android:textColor="@color/dark_blue_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputAmount" />
+
+    <!--    Select Bank-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputSelectBank"
+        style="@style/exposedDropdownMenuCustomWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/select_bank_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tVRecipientDetails">
+
+        <AutoCompleteTextView
+            android:id="@+id/actSelectBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:inputType="none"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    Recipient Account Number-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputRecipientAccountNumber"
+        style="@style/TextInputLayoutStyleWallet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:hint="@string/recipient_account_number_wallet"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputSelectBank">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtRecipientAccountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:hint="@string/recipient_account_number_wallet"
+            android:inputType="number"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    Recipient Name-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputRecipientName"
+        style="@style/TextInputLayoutStyleWallet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:hint="@string/recipient_name_wallet"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputRecipientAccountNumber">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtRecipientName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:hint="@string/john_doe_wallet"
+            android:inputType="text"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    Transfer from text view-->
+    <TextView
+        android:id="@+id/textViewTransferFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:fontFamily="@font/nunitosans_regular_wallet"
+        android:text="@string/transfer_from_wallet"
+        android:textColor="@color/dark_blue_wallet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputRecipientName" />
+
+
+    <!--    Select Account-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputSelectAccount"
+        style="@style/exposedDropdownMenuCustomWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/select_account_wallet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTransferFrom">
+
+        <AutoCompleteTextView
+            android:id="@+id/actAccountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:inputType="none"
+            android:minHeight="48dp"
+            android:textSize="14sp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    Reason for Payment-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputReason"
+        style="@style/TextInputLayoutStyleWallet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:hint="Reason For Payment"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputSelectAccount">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextReason"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/nunitosans_regular_wallet"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:padding="15dp"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    Continue Button-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:background="@drawable/btn_rounded_corners_filled_wallet"
+        android:backgroundTint="@color/light_blue_wallet"
+        android:fontFamily="@font/nunitosans_extrabold_wallet"
+        android:text="@string/continue_wallet"
+        android:textColor="@color/white_wallet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
