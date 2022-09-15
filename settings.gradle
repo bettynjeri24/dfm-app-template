@@ -1,0 +1,11 @@
+dependencyResolutionManagement {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+rootProject.name = "E Tourism"
+include ':app'
+include ':common'
+include ':etourism'
+include ':support'
